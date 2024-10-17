@@ -1,5 +1,7 @@
 import React from "react";
-import qualificationsImage from "../assets/banner.png";
+import banner2 from "../assets/banner2.png";
+import banner3 from "../assets/banner3.png";
+import banner4 from "../assets/banner4.png";
 
 const featuresData = [
   {
@@ -10,7 +12,7 @@ const featuresData = [
       "Real-Time Updates: Keep track of new messages with real-time notifications and an intuitive inbox layout.",
       "Seamless Navigation: Switch between contacts, settings, and other features using the sidebar, making email management a breeze."
     ],
-    image: qualificationsImage,
+    image: banner2,
   },
   {
     title: "Advanced Collaboration Tools",
@@ -20,7 +22,7 @@ const featuresData = [
       "File Sharing: Share documents securely and efficiently with just a few clicks.",
       "Task Management: Assign and track tasks to ensure everyone is on the same page."
     ],
-    image: qualificationsImage,
+    image: banner3,
   },
   {
     title: "The Most Secure Email Connecting",
@@ -30,7 +32,7 @@ const featuresData = [
       "Secure Access: Control who accesses your emails with multi-factor authentication.",
       "Threat Detection: Detect and block unauthorized access attempts with real-time monitoring."
     ],
-    image: qualificationsImage,
+    image: banner4,
   },
 ];
 

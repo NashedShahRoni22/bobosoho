@@ -28,8 +28,6 @@ export default function About() {
     ]
 
     return (
-        <div>
-            <h1 className='text-center text-8xl font-semibold mt-10'>ABOUT</h1>
             <section className='flex flex-col gap-10 md:container md:mx-auto my-10'>
             {About.map((content, i) => (
                 <div key={i} className={`flex flex-col lg:flex-row items-center gap-10 ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''} border-b-2 border-grau pb-5 mx-5`}>
@@ -46,6 +44,5 @@ export default function About() {
 
             <Aboutcontent/>
         </section>
-        </div>
     )
 }
