@@ -50,7 +50,7 @@ const PrivateEmail = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="bg-[url('./assets/bg.jpg')] bg-center bg-cover text-white rounded-2xl h-[100vh] py-5 px-11 w-[400px]"
+            className="bg-[url('./assets/bg.jpg')] bg-center bg-cover text-white rounded-2xl py-5 pb-20 px-11 w-[400px]"
           >
             <h2 className="text-[32px] font-bold text-center mb-4">{plan.title}</h2>
             <h3 className="font-semibold text-[19px] text-center mb-2">UNIQUE FEATURES</h3>
