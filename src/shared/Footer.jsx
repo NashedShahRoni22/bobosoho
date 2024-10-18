@@ -87,7 +87,10 @@ export default function Footer() {
       </div>
 
       {/* Links */}
-      <div className='grid lg:grid-cols-3 mt-5'>
+      
+      <div>
+        <h1 className='text-center text-4xl sm:mt-10 underline'>Bobosoho by Bfinit.</h1>
+      <div className='grid lg:grid-cols-3 mt-5'>     
         <div className='sm:my-8 '>
           <h1 className="font-semibold text-2xl">Hosting Products</h1>
           <div className="flex flex-col gap-2 ml-2 mt-5">
@@ -118,6 +121,8 @@ export default function Footer() {
               ))}
         </div>
         </div>
+      </div>
+      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti nisi vel, modi ipsa assumenda harum voluptatem eveniet explicabo deserunt quisquam a sint. Modi rem delectus nostrum earum voluptatum eos mollitia?</h1>
       </div>
     </section>
     </footer>
