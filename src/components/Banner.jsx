@@ -10,8 +10,7 @@ export default function Banner() {
           Efficient, Secured, Organized, and User-Friendly Email Chats Sharing Platform
         </h1>
         <p style={{lineHeight: "40px"}} className="font-medium lg:text-xl mb-8">
-          Stay organized and boost your productivity with a secure, integrated email platform. Seamlessly connect with other services to get more done in less time.
-        </p>
+        Needing a secured environment that respects your privacy, then boost your security with family and close friends with Bobosoho's integrated secured email chat and share platform. Seamlessly connect to share messages instantly by email or chat, share videos, photos and documents        </p>
         <div className="space-x-4">
           <button className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-transparent hover:border-[1px] hover:border-blue-500 hover:text-blue-500">
             More Features

@@ -1,6 +1,6 @@
 import React from 'react'
 import banner2 from "../assets/privatebanner1.png";
-import banner3 from "../assets/banner3.png";
+import banner3 from "../assets/privatebanner2.png";
 import banner4 from "../assets/banner4.png";
 
 
@@ -16,22 +16,22 @@ const featuresData = [
       image: banner2,
     },
     {
-      title: "Advanced Collaboration Tools",
-      description: "Enhance teamwork with our advanced collaboration features, enabling smooth communication and document sharing among team members.",
+      title: "Secure File Sharing",
+      description: "Share documents, images, and files with encrypted file transfer protocols.",
       benefits: [
-        "Instant Messaging: Communicate instantly with your team without leaving the platform.",
-        "File Sharing: Share documents securely and efficiently with just a few clicks.",
-        "Task Management: Assign and track tasks to ensure everyone is on the same page."
+        "Encryption: Protects your files with robust encryption during transfer.",
+        "Convenience: Easily share documents, images, and files with just a few clicks.",
+        "Privacy: Ensures that only intended recipients can access the shared files."
       ],
       image: banner3,
     },
     {
-      title: "The Most Secure Email Connecting",
-      description: "Ensure the highest level of security for your communication with our advanced protection features, giving you peace of mind.",
+      title: "Customizable User Interface",
+      description: "Personalize the dashboard according to user preferences, offering a tailored experience.",
       benefits: [
-        "Data Encryption: Safeguard your emails with end-to-end encryption for ultimate privacy.",
-        "Secure Access: Control who accesses your emails with multi-factor authentication.",
-        "Threat Detection: Detect and block unauthorized access attempts with real-time monitoring."
+        "Personalization: Tailor the dashboard to match individual user preferences.",
+        "Flexibility: Choose layout options and themes for a unique look and feel.",
+        "Enhanced Experience: Create a user-friendly environment that enhances productivity."
       ],
       image: banner4,
     },

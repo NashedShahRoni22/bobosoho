@@ -5,8 +5,8 @@ import banner4 from "../assets/banner4.png";
 
 const featuresData = [
   {
-    title: "Most Efficient Email Management",
-    description: "Our email interface is designed to help you stay organized and manage your messages effortlessly. With a clean sidebar for easy access to folders like Inbox, Drafts, Sent, Junk, and Trash, along with your personal labels like crypto, documents, and projects, your important emails are always just a click away.",
+    title: "The Easiest and Most Efficient Emailing Platform with Integrated Chat ",
+    description: "Now create new image photos mobile chat and say Put in a chat second create it say Bobosoho integrated chat to connect in full security no sharing of your private info, respecting your privacy, your environment to chat share photos videos and more, create unlimited groups family or friends and instantly share with them ",
     benefits: [
       "Smart Search: Quickly find the emails you need using the built-in search bar.",
       "Real-Time Updates: Keep track of new messages with real-time notifications and an intuitive inbox layout.",
@@ -15,21 +15,25 @@ const featuresData = [
     image: banner2,
   },
   {
-    title: "Advanced Collaboration Tools",
-    description: "Enhance teamwork with our advanced collaboration features, enabling smooth communication and document sharing among team members.",
+    title: "Bobosoho also an advanced collaboration communications tools platform for private and business users",
+    description: "Enhanced project sharing and team work with our secured communication features, enabling smooth quick instant sharing.",
     benefits: [
       "Instant Messaging: Communicate instantly with your team without leaving the platform.",
       "File Sharing: Share documents securely and efficiently with just a few clicks.",
-      "Task Management: Assign and track tasks to ensure everyone is on the same page."
+      "Task Management: Assign and track tasks to ensure everyone is on the same page.",
+      "Creating groups: Create unlimited groups and email instantly bobosoho to bobosoho or send direct to any other email address.",
+      "Secured: To most secured email platforms",
+      "Spam Managing: Spam manager controlling who and what you want to receive in your inbox box.",
+      "Easy to save: Easy to save messages in new create categories like save files and each to delete spam, unwanted messages with all select delete instantly "
     ],
     image: banner3,
   },
   {
-    title: "The Most Secure Email Connecting",
+    title: "The most secured email chat share platform",
     description: "Ensure the highest level of security for your communication with our advanced protection features, giving you peace of mind.",
     benefits: [
-      "Data Encryption: Safeguard your emails with end-to-end encryption for ultimate privacy.",
-      "Secure Access: Control who accesses your emails with multi-factor authentication.",
+      "Data Encryption: Total secured environment respecting your privacy.",
+      "Secure Access:Bobosoho respects your data, its yours, your space no sharing of data totally ",
       "Threat Detection: Detect and block unauthorized access attempts with real-time monitoring."
     ],
     image: banner4,

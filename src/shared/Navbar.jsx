@@ -77,7 +77,7 @@ export default function Navbar() {
                     {mi.name}
                     <BiChevronDown className="text-2xl" />
                   </span>
-                  <div className="absolute bg-white left-5 p-5 shadow rounded min-w-[420px] hidden group-hover:flex flex-col gap-2">
+                  <div className="absolute bg-white left-0 p-5 shadow rounded min-w-[250px] px-5 hidden group-hover:flex flex-col gap-2">
                     {mi.child.map((mc, i) => (
                       <Link to={mc.link} key={i} className="flex gap-1.5 hover:font-semibold  hover:text-bold">
                         {/* <BiChevronRight className="text-2xl" /> */}
@@ -110,7 +110,7 @@ export default function Navbar() {
           </button>
         )}
         {showNav && (
-          <div className="lg:hidden p-5 md:px-14 flex flex-col gap-4 absolute top-16 md:top-28 left-0 shadow-sm bg-white min-w-full transition-all ease-in-out duration-700 h-[60vh]">
+          <div className="lg:hidden p-5 md:px-14 flex flex-col gap-4 absolute top-16 md:top-28 left-0 shadow-sm bg-white min-w-full transition-all ease-in-out duration-700 pt-10 h-[60vh]">
             {MenuItems.map((mi, i) => (
               <div key={i}>
                 {mi.child ? (
