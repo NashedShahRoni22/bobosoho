@@ -1,4 +1,5 @@
 import React from 'react'
+import BussinessFeature from '../components/BussinessFeature';
 const plans = [
     {
       title: "Private User Email Account",
@@ -6,13 +7,15 @@ const plans = [
         "Unique Dashboard",
         "Email Delivery Notification",
         "Multi Language",
+        "Master(Admin) Dashboard",
+        "Project Planner",
         "Private Account",
         "Email With Anti Spam Security",
         "Project Planner",
         "No Spamming Permitted",
         "No Advertisement",
       ],
-      price: "3€/Year",
+      price: "6€/Year",
       note: "Note:Bobosoho email is free,If you purchase any products",
       links: [
         { name: "BFIN IT", url: "bfinit.com" },
@@ -22,13 +25,13 @@ const plans = [
       title: "Pensaki Pack For Home",
       features: [
         "Unique Dashboard Per User",
-        "Up to 20 Private Users",
+        "Upto 100 Private Users",
         "Doc Writer",
         "PDF Convertor",
         "Vault Cloud Space For Photos Videos Docs",
         "Access Via Application Any Device Anywhere with Wifi Connection",
       ],
-      price: "9.50€/Year",
+      price: "39.50€/Year",
       note: "Note: It’s free if you buy any other Bfinit products like:",
       links: [
         { name: "Pensaki", url: "pensaki.org" },
@@ -42,13 +45,13 @@ const BusinessEmail = () => {
   return (
     <section>
     <div>
-      <h1 className="text-center text-6xl py-5 font-custom font-bold">Private User Email Account</h1>
+      <h1 className="text-center text-6xl py-5 font-custom font-bold">Bussiness Email Account</h1>
     </div>
-    <div className="flex justify-center flex-col lg:flex-row items-center gap-20 my-11">
+    <div className="flex justify-center flex-col lg:flex-row items-center  gap-20 my-11">
       {plans.map((plan, index) => (
         <div
           key={index}
-          className="bg-[url('./assets/bg.jpg')] bg-center bg-cover text-white rounded-2xl py-5 pb-20 px-11 w-[400px]"
+          className="bg-[url('./assets/bg.jpg')] bg-center bg-cover h-[125vh] text-white rounded-2xl py-5 pb-20 px-11 w-[400px]"
         >
           <h2 className="text-[32px] font-bold text-center mb-4">{plan.title}</h2>
           <h3 className="font-semibold text-[19px] text-center mb-2">UNIQUE FEATURES</h3>
@@ -84,6 +87,7 @@ const BusinessEmail = () => {
         </div>
       ))}
     </div>
+    <BussinessFeature/>
   </section>
 
   )
