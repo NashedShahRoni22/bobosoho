@@ -80,10 +80,10 @@ export default function Footer() {
         <h1 style={{lineHeight:"50px"}} className='text-4xl font-bold py-5'>
         Bobosoho: Connecting People Through <br /> Secure Emailing
         </h1>
-        <p className='text-[20px] font-medium py-5'>Bringing people together with seamless, private email solutions for personal and business communication.</p>
-        <h1 className='text-4xl font-bold py-5'>Join Bobosoho  Cosmopolitan</h1>
+        <p className='text-[20px] font-medium py-5'>Bringing people together in a <strong className=' underline'> secure environment, we respect your privacy</strong> by offering seamless private email and chat sharing for personal, family, friends, and business communication.</p>
+        <h1 className='text-4xl font-bold py-5'>Bobosoho by Bfinit join Bfinit Cosmopolitan </h1>
         <input className='py-3 px-5 mr-4 rounded-xl' type="email" placeholder='Enter your email' />
-        <button className='bg-blue-200 px-8 py-3 rounded-xl' >Subscribe </button>
+        <button className='bg-blue-500 px-8 py-3 rounded-xl' >Subscribe </button>
       </div>
 
       {/* Links */}
