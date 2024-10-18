@@ -122,7 +122,6 @@ export default function Footer() {
         </div>
         </div>
       </div>
-      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti nisi vel, modi ipsa assumenda harum voluptatem eveniet explicabo deserunt quisquam a sint. Modi rem delectus nostrum earum voluptatum eos mollitia?</h1>
       </div>
     </section>
     </footer>
