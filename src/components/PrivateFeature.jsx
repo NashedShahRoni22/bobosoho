@@ -43,7 +43,7 @@ const PrivateFeature = () => {
     {featuresData.map((feature, index) => (
       <div key={index} className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between p-10 lg:p-20 h-auto lg:h-[100vh] lg:mt-0">
         {/* Alternate layout based on the index for large devices */}
-        <div className={`lg:w-1/2 flex justify-center bg-[url('./assets/Colors1.png')] bg-center bg-no-repeat bg-cover bg-origin-border  ${index % 2 === 0 ? "order-1" : "order-2"} mt-10 lg:mt-0`}>
+        <div className={`lg:w-1/2 flex justify-center  bg-origin-border  ${index % 2 === 0 ? "order-1" : "order-2"} mt-10 lg:mt-0`}>
           <img src={feature.image} alt={`${feature.title} Example`} className="w-full h-auto max-w-lg" />
         </div>
 

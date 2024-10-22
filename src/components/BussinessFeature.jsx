@@ -1,7 +1,7 @@
 import React from 'react'
-import banner2 from "../assets/privatebanner1.png";
-import banner3 from "../assets/privatebanner2.png";
-import banner4 from "../assets/privatebanner3.png";
+import banner2 from "../assets/businessbanner1.png";
+import banner3 from "../assets/businessbanner2.png";
+import banner4 from "../assets/businessbanner3.png";
 
 
 const featuresData = [
@@ -16,22 +16,22 @@ const featuresData = [
       image: banner2,
     },
     {
-      title: "Secure File Sharing",
-      description: "Share documents, images, and files with encrypted file transfer protocols.",
+      title: "Customizable Features",
+      description: "Personalize your business email experience to fit your needs and preferences.",
       benefits: [
-        "Encryption: Protects your files with robust encryption during transfer.",
-        "Convenience: Easily share documents, images, and files with just a few clicks.",
-        "Privacy: Ensures that only intended recipients can access the shared files."
+        "Dashboard Customization: Modify the layout, color schemes, and settings for a tailored look.",
+        "Flexible Setup: Choose how you manage emails, folders, and notifications.",
+        "User Preferences: Adapt the interface to improve usability and productivity."
       ],
       image: banner3,
     },
     {
-      title: "Customizable User Interface",
-      description: "Personalize the dashboard according to user preferences, offering a tailored experience.",
+      title: "Effortless User Experience",
+      description: "Designed for simplicity and efficiency, our platform makes email management easy.",
       benefits: [
-        "Personalization: Tailor the dashboard to match individual user preferences.",
-        "Flexibility: Choose layout options and themes for a unique look and feel.",
-        "Enhanced Experience: Create a user-friendly environment that enhances productivity."
+        "Intuitive Design: Navigate through your emails effortlessly with a user-friendly interface.",
+        "Mobile and Desktop Sync: Access your email anytime, anywhere, with seamless synchronization across devices.",
+        "Productivity Boost: Streamline your communication with tools that enhance workflow and organization."
       ],
       image: banner4,
     },
