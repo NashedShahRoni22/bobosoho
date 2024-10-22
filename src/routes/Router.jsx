@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import PrivateEmail from "../pages/PrivateEmail";
 import BusinessEmail from "../pages/BusinessEmail";
+import Privacypolicy from "../pages/Privacypolicy";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path :"/business",
                 element:<BusinessEmail/>
+            },
+            {
+                path :"/privacypolicy",
+                element:<Privacypolicy/>
             },
         ]
     }

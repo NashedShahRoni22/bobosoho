@@ -49,7 +49,7 @@ export default function Navbar() {
 
     {
       name: "Privacy policy",
-      link: "/privacy",
+      link: "/privacypolicy",
     },
     {
       name: "Contact",
