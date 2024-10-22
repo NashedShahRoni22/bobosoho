@@ -1,7 +1,7 @@
 import React from "react";
-import banner2 from "../assets/banner2.png";
+import banner2 from "../assets/Integrated.png";
 import banner3 from "../assets/banner3.png";
-import banner4 from "../assets/banner4.png";
+import banner4 from "../assets/spam.png";
 
 const featuresData = [
   {
@@ -29,7 +29,7 @@ const featuresData = [
     image: banner3,
   },
   {
-    title: "The most secured email chat share platform",
+    title: "The most secured email chat share",
     description: "Ensure the highest level of security for your communication with our advanced protection features, giving you peace of mind.",
     benefits: [
       "Data Encryption: Total secured environment respecting your privacy.",
@@ -44,18 +44,18 @@ export default function Features() {
   return (
     <section>
       {featuresData.map((feature, index) => (
-        <div key={index} className="flex flex-col lg:flex-row items-center lg:justify-between p-10 lg:p-20 h-auto lg:h-[100vh] lg:mt-0">
+        <div key={index} className="flex flex-col lg:flex-row gap-16 py-10 md:py-20 h-auto lg:h-[100vh] items-center justify-between mx-5 md:container md:mx-auto">
           {/* Alternate layout based on the index for large devices */}
-          <div className={`lg:w-1/2 flex justify-center bg-[url('./assets/creative-rounded.png')] bg-center bg-no-repeat bg-cover bg-origin-border bg-auto ${index % 2 === 0 ? "order-1" : "order-2"} mt-10 lg:mt-0`}>
+          <div className={`lg:w-1/3  ${index % 2 === 0 ? "order-1" : "order-2"} `}>
             <img src={feature.image} alt={`${feature.title} Example`} className="w-full h-auto max-w-lg" />
           </div>
 
-          <div className={`lg:w-1/2 text-center lg:text-left ${index % 2 === 0 ? "order-2" : "order-1"}`}>
-            <h1 style={{ lineHeight: "74px" }} className="text-3xl lg:text-5xl font-bold mb-6">
+          <div className={`lg:w-2/3  text-left ${index % 2 === 0 ? "order-2" : "order-1"}`}>
+            <h1 className="text-2xl lg:text-4xl leading-normal font-semibold text-blue-500">
               {feature.title}{" "}
               <span className="text-blue-500">Platform</span>
             </h1>
-            <p style={{ lineHeight: "35px" }} className="text-lg lg:text-xl mb-6 text-gray-700">
+            <p style={{ lineHeight: "35px" }} className="text-lg lg:text-xl py-6 text-gray-700">
               {feature.description}
             </p>
             <ul className="list-none space-y-4">

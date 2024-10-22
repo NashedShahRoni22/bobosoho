@@ -6,12 +6,12 @@ import banner4 from "../assets/privatebanner3.png";
 
 const featuresData = [
     {
-      title: "End-to-End Encryption Email",
-      description: " Ensures that all messages and shared files are encrypted during transmission, enhancing security.",
+      title: "Business Email Security",
+      description: "Ensure your communication is always protected with industry-leading encryption and anti-spam measures.",
       benefits: [
-        "Privacy Protection: Ensures only sender and recipient can access messages.",
-        "Security: Safeguards data from interception and tampering.",
-        "User Trust: Builds confidence through regulatory compliance and strong data protection."
+        " Privacy: Safeguard sensitive data with robust privacy controls and secure login options.",
+        "Spam Protection: Block unwanted messages with advanced anti-spam filters.",
+        "Data Security: Keep your emails confidential with encrypted transmission and storage."
       ],
       image: banner2,
     },
@@ -37,22 +37,22 @@ const featuresData = [
     },
   ];
 
-const PrivateFeature = () => {
+const BussinessFeature = () => {
   return (
-    <section>
+    <section className='mx-5 md:container md:mx-auto'>
     {featuresData.map((feature, index) => (
       <div key={index} className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between p-10 lg:p-20 h-auto lg:h-[100vh] lg:mt-0">
         {/* Alternate layout based on the index for large devices */}
-        <div className={`lg:w-1/2 flex justify-center bg-[url('./assets/Colors1.png')] bg-center bg-no-repeat bg-cover bg-origin-border  ${index % 2 === 0 ? "order-1" : "order-2"} mt-10 lg:mt-0`}>
+        <div className={`lg:w-1/2 flex justify-center  bg-center bg-no-repeat bg-cover bg-origin-border  ${index % 2 === 0 ? "order-1" : "order-2"} mt-10 lg:mt-0`}>
           <img src={feature.image} alt={`${feature.title} Example`} className="w-full h-auto max-w-lg" />
         </div>
 
         <div className={`lg:w-1/2 text-center lg:text-left ${index % 2 === 0 ? "order-2" : "order-1"}`}>
-          <h1 className="text-3xl lg:text-5xl leading-normal font-semibold">
+          <h1 className="text-2xl lg:text-4xl leading-normal font-semibold">
             {feature.title}{" "}
             <span className="text-blue-500">Platform</span>
           </h1>
-          <p className="my-5 text-gray-700">
+          <p className=" my-6 text-gray-700">
             {feature.description}
           </p>
           <ul className="list-none space-y-4">
@@ -69,4 +69,4 @@ const PrivateFeature = () => {
   )
 }
 
-export default PrivateFeature
+export default BussinessFeature

@@ -44,7 +44,7 @@ const PrivateEmail = () => {
   return (
     <section>
       <div>
-        <h1 className="text-center text-6xl py-5 font-custom font-bold">Private User Email Account</h1>
+        <h1 className="text-3xl lg:text-5xl leading-normal font-semibold my-5 text-center">Private User Email Account</h1>
       </div>
       <div className="flex justify-center flex-col lg:flex-row items-center gap-20 my-11">
         {plans.map((plan, index) => (

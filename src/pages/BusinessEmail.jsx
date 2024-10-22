@@ -45,7 +45,7 @@ const BusinessEmail = () => {
   return (
     <section>
     <div>
-      <h1 className="text-center text-6xl py-5 font-custom font-bold">Bussiness Email Account</h1>
+      <h1 className="text-3xl lg:text-5xl leading-normal font-semibold text-center my-5">Bussiness Email Account</h1>
     </div>
     <div className="flex justify-center flex-col lg:flex-row items-center  gap-20 my-11">
       {plans.map((plan, index) => (

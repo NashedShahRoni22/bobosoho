@@ -61,7 +61,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="sticky top-0 bg-white z-50 shadow-md">
+    <nav className="sticky top-[-2px] bg-white z-50 shadow-md">
       <section className="py-2.5 mx-5 md:container md:mx-auto flex justify-between items-center">
         {/* logo here  */}
         <Link to={"/"} className="flex items-center">
@@ -110,7 +110,7 @@ export default function Navbar() {
           </button>
         )}
         {showNav && (
-          <div className="lg:hidden p-5 md:px-14 flex flex-col gap-4 absolute top-16 md:top-28 left-0 shadow-sm bg-white min-w-full transition-all ease-in-out duration-700 pt-10 h-[60vh]">
+          <div className="lg:hidden p-5 md:px-14 flex flex-col gap-4 absolute top-16 left-0 shadow-sm bg-white min-w-full transition-all ease-in-out duration-700 pt-10 h-[60vh]">
             {MenuItems.map((mi, i) => (
               <div key={i}>
                 {mi.child ? (

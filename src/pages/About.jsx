@@ -28,14 +28,14 @@ export default function About() {
     ]
 
     return (
-            <section className='flex flex-col gap-10 md:container md:mx-auto my-10'>
+            <section className='flex flex-col gap-10 mx-5 md:container md:mx-auto my-10'>
             {About.map((content, i) => (
-                <div key={i} className={`flex flex-col lg:flex-row items-center gap-10 ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''} border-b-2 border-grau pb-5 mx-5`}>
+                <div key={i} className={`flex flex-col lg:flex-row items-center gap-10 ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''} py-10`}>
                     <div className='w-full lg:w-1/2'>
                         <img className='rounded-3xl w-full' src={content.img} alt={`About image ${i + 1}`} />
                     </div>
                     <div className='w-full lg:w-1/2'>
-                        <h1 style={{lineHeight:'80px'}} className='text-4xl lg:text-6xl font-bold leading-loose bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+                        <h1 className='text-4xl lg:text-6xl leading-loose font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
                             {content.heading}
                         </h1>
                     </div>
