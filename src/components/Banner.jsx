@@ -1,5 +1,5 @@
 import React from "react";
-import shocking from "../assets/first image.png"; // Image path
+import shocking from "../assets/first image.png"; 
 
 export default function Banner() {
   return (
