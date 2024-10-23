@@ -39,7 +39,7 @@ const featuresData = [
 
 const PrivateFeature = () => {
   return (
-    <section>
+    <section className='mx-5 md:container md:mx-auto'>
     {featuresData.map((feature, index) => (
       <div key={index} className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between p-10 lg:p-20 h-auto lg:h-[100vh] lg:mt-0">
         {/* Alternate layout based on the index for large devices */}

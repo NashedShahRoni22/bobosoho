@@ -41,7 +41,7 @@ export default function Aboutcontent() {
     ];
 
     return (
-        <section className='relative'>
+        <section className='relative mx-5 md:container md:mx-auto'>
             {Para.map((contents, i) => (
                 <div key={i} className={`rounded-3xl sticky top-0 py-20 px-10 my-10 text-3xl ${colors[i % colors.length]}`}>
                     <p>{contents.content}</p>

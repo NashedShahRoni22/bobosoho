@@ -43,7 +43,7 @@ const plans = [
 
 const BusinessEmail = () => {
   return (
-    <section>
+    <section className='mx-5 md:container md:mx-auto'>
     <div>
       <h1 className="text-3xl lg:text-5xl leading-normal font-semibold text-center my-5">Bussiness Email Account</h1>
     </div>

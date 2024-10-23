@@ -42,7 +42,7 @@ const plans = [
 
 const PrivateEmail = () => {
   return (
-    <section>
+    <section className='mx-5 md:container md:mx-auto'>
       <div>
         <h1 className="text-3xl lg:text-5xl leading-normal font-semibold my-5 text-center">Private User Email Account</h1>
       </div>

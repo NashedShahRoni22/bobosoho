@@ -42,9 +42,9 @@ const featuresData = [
 
 export default function Features() {
   return (
-    <section>
+    <section className="mx-5 md:container md:mx-auto">
       {featuresData.map((feature, index) => (
-        <div key={index} className="flex flex-col lg:flex-row gap-16 py-10 md:py-20 h-auto lg:h-[100vh] items-center justify-between mx-5 md:container md:mx-auto">
+        <div key={index} className="flex flex-col lg:flex-row gap-16 py-10 md:py-20 h-auto lg:h-[100vh] items-center justify-between">
           {/* Alternate layout based on the index for large devices */}
           <div className={`lg:w-1/3  ${index % 2 === 0 ? "order-1" : "order-2"} `}>
             <img src={feature.image} alt={`${feature.title} Example`} className="w-full h-auto max-w-lg" />
