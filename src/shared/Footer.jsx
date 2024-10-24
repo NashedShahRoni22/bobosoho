@@ -81,7 +81,7 @@ export default function Footer() {
         Bobosoho: Connecting People Through <br /> Secure Emailing
         </h1>
         <p className='text-[20px] font-medium py-5'>Bringing people together in a <strong className=' underline'> secure environment, we respect your privacy</strong> by offering seamless private email and chat sharing for personal, family, friends, and business communication.</p>
-        <h1 className='text-4xl font-bold py-5'>Bobosoho by Bfinit join Bfinit Cosmopolitan </h1>
+        <h1 className='text-4xl font-bold py-5'>Join Bfinit Cosmopolitan upto two months free added onto your inscription on joining</h1>
         <div className='flex items-center'>
         <input className='py-3 px-5 border-2 rounded-l-xl' type="email" placeholder='Enter your email' />
         <button className=' px-8 py-3 border-2 rounded-r-xl' >Subscribe </button>

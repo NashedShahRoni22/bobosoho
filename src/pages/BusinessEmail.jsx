@@ -46,6 +46,11 @@ const BusinessEmail = () => {
     <section className='mx-5 md:container md:mx-auto'>
     <div>
       <h1 className="text-3xl lg:text-5xl leading-normal font-semibold text-center my-5">Bussiness Email Account</h1>
+      <p className='lg:px-20 px-0 text-center text-2xl'>Bobosoho  a private secured environment to email, chat and share business documents, 
+        videos, projects as Bobosoho respects your privacy by offering an secured environment to chat share and email to family and friends.
+         No advertising no, sharing of your details for marketing, a closed private enviroment gauranteed. Upto 100 accounts ( extendable) 
+         gauranteeing a private secured enviroment, each user with a dedicated interface recupabale by master admin when required, thus ensuring 
+         continuation , Low cost monthly group fee 0.5cents per user per month. This could be very helpful for your business.</p>
     </div>
     <div className="flex justify-center flex-col lg:flex-row items-center  gap-20 my-11">
       {plans.map((plan, index) => (

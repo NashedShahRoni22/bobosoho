@@ -24,7 +24,7 @@ const plans = [
     title: "Pensaki Pack For Home",
     features: [
       "Unique Dashboard Per User",
-      "Up to 20 Private Users",
+      "Up to 30 Private Users",
       "Doc Writer",
       "PDF Convertor",
       "Vault Cloud Space For Photos Videos Docs",
@@ -45,6 +45,10 @@ const PrivateEmail = () => {
     <section className='mx-5 md:container md:mx-auto'>
       <div>
         <h1 className="text-3xl lg:text-5xl leading-normal font-semibold my-5 text-center">Private User Email Account</h1>
+        <p className='lg:px-20 px-0 text-center text-2xl'>Bobosoho  a private secured environment to email, chat and share. 
+          Bobosoho respects your privacy by offering an secured environment to chat share and email to family and friends. No advertising no, 
+          sharing of your details for marketing, a closed private enviroment gauranteed , Low cost monthly group fee .026cents per user per month.
+           This could be super gift to your friends </p>
       </div>
       <div className="flex justify-center flex-col lg:flex-row items-center gap-20 my-11">
         {plans.map((plan, index) => (

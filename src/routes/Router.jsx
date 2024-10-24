@@ -6,6 +6,7 @@ import PrivateEmail from "../pages/PrivateEmail";
 import BusinessEmail from "../pages/BusinessEmail";
 import Privacypolicy from "../pages/Privacypolicy";
 import Contact from "../pages/Contact";
+import Security from "../pages/Security";
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
             {
                 path :"/contact",
                 element:<Contact/>
+            },
+            {
+                path :"/security",
+                element:<Security/>
             },
         ]
     }
