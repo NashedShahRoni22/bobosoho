@@ -42,7 +42,18 @@ export default function Footer() {
       name: "Ifgaap Acounting & Invoicing",
       link: "https://ifgaap.org/",
     },
-
+    {
+      name: "Ifgaap Acounting & Invoicing",
+      link: "https://ifgaap.org/",
+    },
+    {
+      name: "BFINIT Saas Software",
+      link: "https://officetools.bobosoho.com/special-software/",
+    },
+    {
+      name: "BFINIT White Label",
+      link: "https://bfin.company/software/white_label/",
+    },
     {
       name: "Sosay Social Media",
       link: "https://sosay.org/",
@@ -51,99 +62,101 @@ export default function Footer() {
 
   const Pages = [
     {
+      name: "Home",
+      link: "/",
+    },
+    {
       name: "About Us",
       link: "/about",
     },
     {
-      name: "Private Emailing",
-      link: "/private",
+      name: "Contact Us",
+      link: "/contact",
     },
     {
-      name: "Business Emailing",
-      link: "/bussiness",
-    },
-    {
-      name: "Security",
-      link: "/security",
-    },
-    {
-      name: "Privacy policy",
-      link: "/privacypolicy",
+      name: "Career",
+      link: "/career",
     },
   ];
+
   return (
-    <footer className="bg-blue-500  text-white py-10  md:py-20 ">
-      <section className="grid lg:grid-cols-2 mx-5 md:container md:mx-auto">
-        {/* Left section */}
-        <div>
-          <Link to={"/"}>
-            <img className="w-[400px]" src={logo} alt="" />
-          </Link>
-          <h1
-            style={{ lineHeight: "50px" }}
-            className="text-4xl font-bold py-5"
-          >
-            Bobosoho: Connecting People Through <br /> Secure Emailing
-          </h1>
-          <p className="text-[20px] font-medium py-5">
-            Bringing people together in a{" "}
-            <strong className=" underline">
-              {" "}
-              secure environment, we respect your privacy
-            </strong>{" "}
-            by offering seamless private email and chat sharing for personal,
-            family, friends, and business communication.
+    <footer>
+      {/* email joining section */}
+      <section className="py-10 bg-primary text-white text-center md:py-20">
+        <div className="md:mx-auto md:container">
+          <h2 className="text-2xl lg:text-5xl font-semibold tracking-wider">
+            Join BFINIT Cosmopolitan
+          </h2>
+          <p className="mt-2 text-lg tracking-wide">
+            Enjoy up to 2 Months Free with Your Subscription!
           </p>
-          <h1 className="text-4xl font-bold py-5">
-            Join Bfinit Cosmopolitan upto two months free added onto your
-            inscription on joining
-          </h1>
-          <div className="flex items-center">
+          <div className="mx-auto mt-8 text-black flex items-center justify-center w-3/4 md:w-2/5">
             <input
-              className="py-3 px-5 border-2 rounded-l-xl"
+              className="w-full rounded-l px-4 py-2.5 outline-none shadow"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter your Email"
             />
-            <button className=" px-8 py-3 border-2 rounded-r-xl">
-              Subscribe{" "}
+            <button
+              type="submit"
+              className="rounded-r bg-[#6a93fc] px-4 py-2.5 text-white transition-all ease-in-out duration-200 shadow hover:bg-blue-500"
+            >
+              Subscribe
             </button>
           </div>
         </div>
+      </section>
 
-        {/* Links */}
-
-        <div>
-          <h1 className=" text-4xl sm:mt-10 underline">Bobosoho by Bfinit.</h1>
-          <div className="grid lg:grid-cols-3 mt-5">
-            <div className="sm:my-8 ">
-              <h1 className="font-semibold text-2xl">Hosting Products</h1>
-              <div className="flex flex-col gap-2 ml-2 mt-5">
-                {hostingProducts.map((product, i) => (
-                  <Link to={product.link} key={i} className="flex gap-2.5">
-                    {product.name}
-                  </Link>
-                ))}
-              </div>
+      {/* footer section */}
+      <section className="bg-[#001a20] text-white">
+        <div className="py-10 mx-5 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 md:py-28 md:mx-auto md:container">
+          <div className="">
+            <Link to={"/"}>
+              <img className="w-44" src={logo} alt="bobosoho logo" />
+            </Link>
+            <p className="mt-3 text-2xl">By BFINIT Cosmopolitan</p>
+            <p className="mt-3 mb-6">
+              Securely connecting you with seamless email and chat for personal
+              and business communication.
+            </p>
+            <a
+              className="underline"
+              href="mailto:support@bobosohomail.com"
+              target="_blanck"
+            >
+              support@bobosohomail.com
+            </a>
+          </div>
+          {/* hosting products */}
+          <div>
+            <h1 className="font-semibold">Hosting Products</h1>
+            <div className="flex flex-col gap-2 ml-2 mt-2">
+              {hostingProducts.map((product, i) => (
+                <Link to={product.link} key={i} className="flex gap-2.5">
+                  {product.name}
+                </Link>
+              ))}
             </div>
-            <div className="sm:my-8 mt-5">
-              <h1 className="font-semibold text-2xl">Other Products</h1>
-              <div className="flex flex-col gap-2 ml-2 mt-5">
-                {Products.map((product, i) => (
-                  <Link to={product.link} key={i} className="flex gap-2.5">
-                    {product.name}
-                  </Link>
-                ))}
-              </div>
+          </div>
+          {/* other products */}
+          <div>
+            <h1 className="font-semibold">Other Products</h1>
+            <div className="flex flex-col gap-2 ml-2 mt-2">
+              {Products.map((product, i) => (
+                <Link to={product.link} key={i} className="flex gap-2.5">
+                  {product.name}
+                </Link>
+              ))}
             </div>
-            <div className="sm:my-8 mt-5">
-              <h1 className="font-semibold text-2xl">Pages</h1>
-              <div className="flex flex-col gap-2 ml-2 mt-5">
-                {Pages.map((product, i) => (
-                  <Link to={product.link} key={i} className="flex gap-2.5">
-                    {product.name}
-                  </Link>
-                ))}
-              </div>
+          </div>
+          {/* pages */}
+          <div>
+            <h1 className="font-semibold">Quick Links to BFINIT</h1>
+            <div className="flex flex-col gap-2 ml-2 mt-2">
+              {Pages.map((product, i) => (
+                <Link to={product.link} key={i} className="flex gap-2.5">
+                  {product.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

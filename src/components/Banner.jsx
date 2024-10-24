@@ -2,25 +2,23 @@ import shocking from "../assets/first image.png";
 
 export default function Banner() {
   return (
-    <section className="flex flex-col lg:flex-row gap-16 py-10 md:py-20 h-auto lg:h-[100vh] items-center justify-between mx-5 md:container md:mx-auto">
+    <section className="min-h-screen mx-5 py-10 flex flex-col gap-16 items-center justify-between md:py-20 md:container md:mx-auto lg:flex-row">
       {/* Left Side: Text */}
       <div className=" lg:w-1/2">
         <h1 className="text-5xl font-medium md:text-6xl">
-          Efficient, Secure & User-Friendly{" "}
+          Efficient, Secure & User-Friendly
           <span className="text-primary">Email Sharing Platform</span>
         </h1>
-        <p className="mb-10 mt-5 text-gray-600">
-          Needing a secured environment that respects your privacy, then boost
-          your security with family and close friends with Bobosoho's integrated
-          secured email chat and share platform. Seamlessly connect to share
-          messages instantly by email or chat, share videos, photos and
-          documents{" "}
+        <p className="mb-10 mt-5 text-lg text-gray-600">
+          Protect your privacy with Bobosoho’s secure email & chat platform.
+          Instantly share messages, photos, videos, & documents with family &
+          friends.
         </p>
-        <div className="space-x-4">
-          <button className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-transparent hover:border-[1px] hover:border-blue-500 hover:text-blue-500">
+        <div className="space-x-4 text-lg font-medium">
+          <button className="bg-primary border-[1px] border-primary text-white px-6 py-2.5 rounded shadow transition-all duration-300 hover:bg-transparent hover:text-primary">
             More Features
           </button>
-          <button className="text-blue-500 border border-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+          <button className="text-primary border border-primary px-6 py-2.5 rounded hover:bg-primary hover:text-white transition-all duration-300">
             Contact
           </button>
         </div>

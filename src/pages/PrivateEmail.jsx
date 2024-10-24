@@ -1,5 +1,4 @@
-import React from 'react'
-import PrivateFeature from '../components/PrivateFeature';
+import PrivateFeature from "../components/PrivateFeature";
 
 const plans = [
   {
@@ -16,9 +15,7 @@ const plans = [
     ],
     price: "3€/Year",
     note: "Note:Bobosoho email is free,If you purchase any products",
-    links: [
-      { name: "BFIN IT", url: "bfinit.com" },
-      ],
+    links: [{ name: "BFIN IT", url: "bfinit.com" }],
   },
   {
     title: "Pensaki Pack For Home",
@@ -42,13 +39,19 @@ const plans = [
 
 const PrivateEmail = () => {
   return (
-    <section className='mx-5 md:container md:mx-auto'>
+    <section className="mx-5 md:container md:mx-auto">
       <div>
-        <h1 className="text-3xl lg:text-5xl leading-normal font-semibold my-5 text-center">Private User Email Account</h1>
-        <p className='lg:px-20 px-0 text-center text-2xl'>Bobosoho  a private secured environment to email, chat and share. 
-          Bobosoho respects your privacy by offering an secured environment to chat share and email to family and friends. No advertising no, 
-          sharing of your details for marketing, a closed private enviroment gauranteed , Low cost monthly group fee .026cents per user per month.
-           This could be super gift to your friends </p>
+        <h1 className="text-3xl lg:text-5xl leading-normal font-semibold my-5 text-center">
+          Private User Email Account
+        </h1>
+        <p className="lg:px-20 px-0 text-center text-2xl">
+          Bobosoho a private secured environment to email, chat and share.
+          Bobosoho respects your privacy by offering an secured environment to
+          chat share and email to family and friends. No advertising no, sharing
+          of your details for marketing, a closed private enviroment gauranteed
+          , Low cost monthly group fee .026cents per user per month. This could
+          be super gift to your friends
+        </p>
       </div>
       <div className="flex justify-center flex-col lg:flex-row items-center gap-20 my-11">
         {plans.map((plan, index) => (
@@ -56,8 +59,12 @@ const PrivateEmail = () => {
             key={index}
             className="bg-[url('./assets/bg.jpg')] bg-center bg-cover text-white rounded-2xl py-5 pb-20 px-11 w-[400px]"
           >
-            <h2 className="text-[32px] font-bold text-center mb-4">{plan.title}</h2>
-            <h3 className="font-semibold text-[19px] text-center mb-2">UNIQUE FEATURES</h3>
+            <h2 className="text-[32px] font-bold text-center mb-4">
+              {plan.title}
+            </h2>
+            <h3 className="font-semibold text-[19px] text-center mb-2">
+              UNIQUE FEATURES
+            </h3>
             <ul className="space-y-2">
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-start text-xl gap-2 py-3">
@@ -78,7 +85,10 @@ const PrivateEmail = () => {
                   <ul className="mt-2 space-y-1">
                     {plan.links.map((link, j) => (
                       <li key={j}>
-                        <a href={link.url} className="text-blue-300 hover:underline">
+                        <a
+                          href={link.url}
+                          className="text-blue-300 hover:underline"
+                        >
                           {link.name}
                         </a>
                       </li>
@@ -90,10 +100,8 @@ const PrivateEmail = () => {
           </div>
         ))}
       </div>
-      <PrivateFeature/>
+      <PrivateFeature />
     </section>
-
-    
   );
 };
 
