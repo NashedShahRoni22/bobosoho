@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BiChevronDown, BiChevronRight, BiChevronUp } from "react-icons/bi";
 import { CgClose } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { MdArrowOutward } from "react-icons/md";
 import logo from "../assets/bobosoho.jpg";
 
 export default function Navbar() {
@@ -20,14 +19,11 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const MenuItems = [
     {
       name: "Home",
       link: "/",
-    },
-    {
-      name: "About Us",
-      link: "/about",
     },
     {
       name: "Features",
@@ -43,43 +39,39 @@ export default function Navbar() {
       ],
     },
     {
-      name: "Security",
-      link: "/security",
-    },
-
-    {
-      name: "Privacy policy",
-      link: "/privacypolicy",
+      name: "About Us",
+      link: "/about",
     },
     {
       name: "Contact",
       link: "/contact",
     },
-    {
-      name: "Login",
-      link: "https://www.bobosohomail.com/",
-    },
   ];
+
   return (
-    <nav className="sticky top-[-2px] bg-white z-50 shadow-md">
-      <section className="py-2.5 mx-5 md:container md:mx-auto flex justify-between items-center">
+    <nav className="sticky top-[-2px] border-b border-blue-50 bg-white z-50 shadow">
+      <section className="py-3 mx-5 md:container md:mx-auto flex justify-between items-center">
         {/* logo here  */}
-        <Link to={"/"} className="flex items-center">
-          <img src={logo} className="h-[40px] md:h-[60px]" alt="" />
+        <Link to="/" className="flex items-center">
+          <img src={logo} className="h-10" alt="bobosoho logo" />
         </Link>
         {/* desktop view  */}
-        <div className="hidden lg:flex lg:gap-8 lg:items-center">
+        <ul className="hidden lg:flex lg:gap-6 lg:items-center">
           {MenuItems.map((mi, i) => (
-            <div key={i}>
+            <li key={i}>
               {mi.child ? (
-                <div className="relative group text-[18px]">
-                  <span className="flex items-center gap-1 cursor-pointer font-semibold">
+                <div className="relative group">
+                  <span className="flex items-center gap-1 cursor-pointer">
                     {mi.name}
                     <BiChevronDown className="text-2xl" />
                   </span>
                   <div className="absolute bg-white left-0 p-5 shadow rounded min-w-[250px] px-5 hidden group-hover:flex flex-col gap-2">
                     {mi.child.map((mc, i) => (
-                      <Link to={mc.link} key={i} className="flex gap-1.5 hover:font-semibold  hover:text-bold">
+                      <Link
+                        to={mc.link}
+                        key={i}
+                        className="flex gap-1.5 text-gray-600 transition-all ease-in-out duration-200 hover:text-black"
+                      >
                         {/* <BiChevronRight className="text-2xl" /> */}
                         <span className="flex-1">{mc.name}</span>
                       </Link>
@@ -87,18 +79,19 @@ export default function Navbar() {
                   </div>
                 </div>
               ) : (
-                <Link
-                  to={mi.link}
-                  key={i}
-                  className="text-[18px] font-semibold flex items-center gap-2.5"
-                >
+                <Link to={mi.link} key={i}>
                   {mi.name}
-                  {/* <MdArrowOutward /> */}
                 </Link>
               )}
-            </div>
+            </li>
           ))}
-        </div>
+          <Link
+            to="/login"
+            className="rounded bg-primary px-4 py-2 text-white shadow"
+          >
+            Log In
+          </Link>
+        </ul>
         {/* mobile view  */}
         {showNav ? (
           <button className="lg:hidden" onClick={() => setShowNav(!showNav)}>
@@ -164,12 +157,9 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            
           </div>
         )}
-       
       </section>
-      <div className="bg-primary w-full h-0.5"></div>
     </nav>
   );
 }
