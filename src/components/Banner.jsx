@@ -1,4 +1,4 @@
-import shocking from "../assets/first image.png";
+import shocking from "../assets/LandingBanner.png";
 
 export default function Banner() {
   return (
@@ -6,7 +6,7 @@ export default function Banner() {
       {/* Left Side: Text */}
       <div className=" lg:w-1/2">
         <h1 className="text-5xl font-medium md:text-6xl">
-          Efficient, Secure & User-Friendly
+          Efficient, Secure & User-Friendly {" "}
           <span className="text-primary">Email Sharing Platform</span>
         </h1>
         <p className="mb-10 mt-5 text-lg text-gray-600">

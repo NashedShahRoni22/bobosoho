@@ -1,12 +1,16 @@
 import { FaRegCircleCheck } from "react-icons/fa6";
-import banner2 from "../assets/Integrated.png";
-import banner3 from "../assets/banner3.png";
+import banner2 from "../assets/LandingBanner2.png";
+import banner3 from "../assets/LandingBanner3.png";
 import banner4 from "../assets/spam.png";
 
 const featuresData = [
   {
-    title:
-      "The Bobosoho secured social enviroment, is user friendly, the efficient and secured emailing, Chat and share Platform",
+    title: [
+      "Secured, private, user friendly social environment for ",
+      <span key="bobosoho" className="text-primary">
+        email and chat sharing
+      </span>,
+    ],
     description:
       "Now join as an individual or with a group of friends family and create new image photos, videos, chat. Create your text message within seconds and share instantly to your group with unlimited users. Bobosoho integrated chat to connect in full security no sharing of your private info, respecting your privacy policy, bobosoho is your secured private environment to chat share photos videos and more, create unlimited groups with unlimited users, family or friends and instantly share with them",
     benefits: [
@@ -57,7 +61,7 @@ const featuresData = [
 
 export default function Features() {
   return (
-    <section className="mx-5 md:container md:mx-auto">
+    <section className="mx-5 md:container md:mx-auto md:min-h-screen">
       {featuresData.map((feature, index) => (
         <div
           key={index}
@@ -65,21 +69,21 @@ export default function Features() {
         >
           {/* Alternate layout based on the index for large devices */}
           <div
-            className={`lg:w-1/3  ${index % 2 === 0 ? "order-1" : "order-2"} `}
+            className={`lg:w-1/2  ${index % 2 === 0 ? "order-1" : "order-2"} `}
           >
             <img
               src={feature.image}
               alt={`${feature.title} Example`}
-              className="w-full h-auto max-w-lg"
+              className="w-full h-fit"
             />
           </div>
 
           <div
-            className={`lg:w-2/3  text-left ${
+            className={`lg:w-1/2  text-left ${
               index % 2 === 0 ? "order-2" : "order-1"
             }`}
           >
-            <h1 className="text-4xl leading-normal font-semibold">
+            <h1 className="text-4xl leading-normal font-semibold capitalize">
               {feature.title}
             </h1>
             <p className="pt-3 pb-6 text-lg text-gray-600">
