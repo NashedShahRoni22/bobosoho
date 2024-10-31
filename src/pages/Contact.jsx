@@ -61,6 +61,8 @@ const Contact = () => {
           <Lottie options={defaultOptions} height={"100%"} width={"100%"} />
         </div>
       </div>
+
+      {/* Contact Form */}
       <ContactForm />
     </section>
   );

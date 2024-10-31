@@ -1,6 +1,6 @@
 import { FaRegCircleCheck } from "react-icons/fa6";
 import banner2 from "../assets/LandingBanner2.png";
-import banner3 from "../assets/LandingBanner3.png";
+import banner3 from "../assets/features/collab-business-email.png";
 import banner4 from "../assets/spam.png";
 
 const featuresData = [
@@ -65,11 +65,13 @@ export default function Features() {
       {featuresData.map((feature, index) => (
         <div
           key={index}
-          className="flex flex-col lg:flex-row gap-16 py-10 md:py-20 h-auto lg:h-[100vh] items-center justify-between"
+          className="py-10 min-h-screen flex flex-col gap-16 items-center justify-between md:py-20 lg:flex-row"
         >
           {/* Alternate layout based on the index for large devices */}
           <div
-            className={`lg:w-1/2  ${index % 2 === 0 ? "order-1" : "order-2"} `}
+            className={`lg:w-1/2  ${
+              index % 2 === 0 ? "order-2 lg:order-1" : "order-1 lg:order-2"
+            } `}
           >
             <img
               src={feature.image}

@@ -1,65 +1,181 @@
-import { useState, useEffect } from "react";
-import countryData from "./country.json"; // Correct path to your local JSON file
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaSpinner } from "react-icons/fa6";
+import Captcha from "./Captcha";
+import { smtpexpressClient } from "../data/smtp";
 
 const ContactForm = () => {
-  const [captcha, setCaptcha] = useState({ question: "", answer: null });
-  const [invalidCaptcha, setInvalidCaptcha] = useState(false);
+  const navigate = useNavigate();
+  const form = useRef();
+  const [loader, setLoader] = useState(false);
+  const [countries, setCountries] = useState([]);
   const [formData, setFormData] = useState({
-    captchaInput: "",
     name: "",
     email: "",
     phone: "",
     country: "",
+    skypeId: "",
+    subject: "",
     message: "",
+    captchaInput: "",
   });
 
-  // Generate a random number for captcha
-  const getRandomNumber = () => Math.floor(Math.random() * 26) + 6;
+  const [captchaAnswer, setCaptchaAnswer] = useState(null);
+  const [invalidCaptcha, setInvalidCaptcha] = useState(false);
+  const [invalidMessage, setInvalidMessage] = useState(false);
+  const [invalidKey, setInvalidKey] = useState(false);
+  const [forbiddenWords, setForbiddenWords] = useState([]);
 
-  // Generate and set captcha
-  const generateCaptcha = () => {
-    const num1 = getRandomNumber();
-    const num2 = getRandomNumber();
-    setCaptcha({
-      question: `${num1} + ${num2} =`,
-      answer: num1 + num2,
-    });
-  };
-
+  // Get all countries name
   useEffect(() => {
-    generateCaptcha(); // Generate captcha when component loads
+    fetch("/country.json")
+      .then((response) => response.json())
+      .then((data) => setCountries(data))
+      .catch((error) => console.error("Error loading country data:", error));
+
+    fetchForbiddenWords();
   }, []);
 
+  // Handle input filed change
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
+  // Get all forbidden words list
+  const fetchForbiddenWords = async () => {
+    const apiUrl = "https://bitts.fr/api.php";
+
+    try {
+      const credential = await fetch("/credential.json");
+      const credentialsData = await credential.json();
+      if (
+        !credentialsData ||
+        !credentialsData.username ||
+        !credentialsData.password
+      ) {
+        return;
+      }
+
+      const servername = window.location.hostname;
+      const data = { ...credentialsData, servername };
+
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        setForbiddenWords(result ?? []);
+      } else {
+        setInvalidKey(true);
+      }
+    } catch (error) {
+      console.error("Error fetching forbidden words:", error);
+      setInvalidKey(true);
+    }
+  };
+
+  // Check for forbidden words in message filed
+  const checkForbiddenWords = (message) => {
+    for (const word of forbiddenWords) {
+      if (message.toLowerCase().includes(word.toLowerCase())) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  // Handle contact form submit
   const submitForm = async (event) => {
     event.preventDefault();
+    setLoader(true);
 
-    // Captcha validation
-    if (parseInt(formData.captchaInput, 10) !== captcha.answer) {
+    if (parseInt(formData.captchaInput, 10) !== captchaAnswer) {
+      setLoader(false);
       setInvalidCaptcha(true);
-      generateCaptcha(); // Generate a new captcha on failure
       return;
+    } else {
+      setInvalidCaptcha(false);
     }
 
-    // Handle form submission logic here
-    console.log("Form Data:", formData);
-    // Reset form and captcha after successful submission
+    if (!checkForbiddenWords(formData.message)) {
+      setLoader(false);
+      setInvalidMessage(true);
+      return;
+    } else {
+      setInvalidMessage(false);
+    }
+
+    try {
+      // Create a formatted message to send
+      const formattedMessage = `
+            Name: ${formData.name}
+            <br />
+            Email: ${formData.email}
+            <br />
+            Subject: ${formData.subject}
+            <br />
+            Phone: ${formData.phone}
+            <br />
+            Country: ${formData.country}
+            <br />
+            Skype ID: ${formData.skypeId}
+            <br />
+            Message: ${formData.message}
+      `;
+      // Sending an email using SMTP
+      await smtpexpressClient.sendApi.sendMail({
+        // Subject of the email
+        subject: `Bobosoho Contact Form Submission from ${formData.name}`,
+        // Body of the email
+        message: `${formattedMessage}`,
+        // Sender's details
+        sender: {
+          // Sender's name
+          name: "Bobosoho",
+          // Sender's email address
+          email: "bfinit-9b2b98@projects.smtpexpress.com",
+        },
+        // Recipient's details
+        recipients: {
+          // Recipient's email address (obtained from the form)
+          // email: `${formData.email}`,
+          email: `support@bobosohomail.com`,
+        },
+      });
+
+      setLoader(false);
+      // Notify user of successful submission
+      alert("Contact message sent. Our support team will reach you soon.");
+      navigate("/");
+    } catch (error) {
+      setLoader(false);
+      // Notify user if an error occurs during submission
+      alert("Oops! Something went wrong. Please try again later.");
+      // You can console.log the error to know what went wrong
+      console.log(error);
+    }
+
+    // Reset form data and captcha invalidation error message
+    setInvalidCaptcha(false);
+    setInvalidMessage(false);
     setFormData({
-      captchaInput: "",
       name: "",
       email: "",
       phone: "",
       country: "",
+      skypeId: "",
+      subject: "",
       message: "",
+      captchaInput: "",
     });
-    generateCaptcha(); // Reset captcha
-    setInvalidCaptcha(false);
+
+    console.log(formData);
   };
 
   return (
@@ -70,93 +186,150 @@ const ContactForm = () => {
       </p>
 
       <div className="mt-16 flex flex-col lg:flex-row gap-10">
-        <form onSubmit={submitForm} className="lg:w-1/2 flex flex-col gap-5">
+        {/* Contact Form */}
+        <form
+          ref={form}
+          onSubmit={submitForm}
+          className="flex flex-col gap-5 rounded border p-6 lg:w-1/2"
+        >
+          <label htmlFor="name" className="text-lg font-medium">
+            Name *
+          </label>
           <input
             type="text"
+            id="name"
             name="name"
-            placeholder="Name*"
             required
-            className="block border outline-none rounded py-2 px-4"
-            onChange={handleChange}
             value={formData.name}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Email*"
-            required
-            className="placeholder:text-black outline-1 outline-blue-500 border-2 rounded py-2 pl-4 pr-48"
             onChange={handleChange}
-            value={formData.email}
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="Enter Phone*"
-            required
-            className="placeholder:text-black outline-1 outline-blue-500 border-2 rounded py-2 pl-4 pr-48"
-            onChange={handleChange}
-            value={formData.phone}
+            placeholder="Name"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
           />
 
-          {/* Country Dropdown */}
+          <label htmlFor="email" className="text-lg font-medium">
+            Email *
+          </label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
+          />
+
+          <label htmlFor="phone" className="text-lg font-medium">
+            Phone *
+          </label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Phone"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
+          />
+
+          <label htmlFor="country" className="text-lg font-medium">
+            Country *
+          </label>
           <select
+            id="country"
             name="country"
             required
-            className="placeholder:text-black outline-1 outline-blue-500 border-2 rounded py-2 pl-4 pr-48"
             onChange={handleChange}
-            value={formData.country}
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
           >
-            <option value="" disabled>
-              Select country
-            </option>
-            {countryData.map((country) => (
-              <option key={country.name} value={country.dialing_code}>
+            {countries.map((country) => (
+              <option key={country.name} value={country.name}>
                 {country.name}
               </option>
             ))}
           </select>
 
+          <label htmlFor="subject" className="text-lg font-medium">
+            Subject/Query *
+          </label>
           <input
             type="text"
-            placeholder="Skype ID"
-            className="placeholder:text-black outline-1 outline-blue-500 border-2 rounded py-2 pl-4 pr-48"
-          />
-          <input
-            type="text"
-            name="message"
-            placeholder="Subject/Query*"
+            id="subject"
+            name="subject"
             required
-            className="placeholder:text-black outline-1 outline-blue-500 border-2 rounded py-2 pl-4 pr-48"
+            value={formData.subject}
             onChange={handleChange}
-            value={formData.message}
+            placeholder="Subject"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
           />
 
-          {/* Captcha Section */}
-          <div id="captchaDisplay">
-            <p>{captcha.question}</p>
-          </div>
+          <label htmlFor="skypeId" className="text-lg font-medium">
+            Skype ID
+          </label>
           <input
             type="text"
+            id="skypeId"
+            name="skypeId"
+            value={formData.skypeId}
+            onChange={handleChange}
+            placeholder="Skype Id (optional)"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
+          />
+
+          <label htmlFor="message" className="text-lg font-medium">
+            Enter Message *
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows={3}
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Message"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
+          />
+
+          {/* Captcha Component */}
+          <Captcha onCaptchaGenerated={setCaptchaAnswer} />
+
+          <input
+            type="text"
+            id="captchaInput"
             name="captchaInput"
             required
-            placeholder="Enter Captcha*"
-            className="placeholder:text-black outline-1 outline-blue-500 border-2 rounded py-2 pl-4 pr-48"
-            onChange={handleChange}
             value={formData.captchaInput}
+            onChange={handleChange}
+            placeholder="Captcha *"
+            className="mt-2 block w-full rounded border px-4 py-3 outline-none focus:border-black"
           />
+
           {invalidCaptcha && (
-            <p id="invalidCaptcha" className="text-red-500">
-              Invalid Captcha! Please try again.
+            <p className="text-red-500">Invalid Captcha! Please try again.</p>
+          )}
+          {invalidMessage && (
+            <p className="text-red-500">
+              Your message contains forbidden words.
             </p>
           )}
+          {invalidKey && <p className="text-red-500">Invalid API Key.</p>}
+
           <button
             type="submit"
-            className="py-3 rounded shadow px-6 text-white mb-5 bg-blue-500 w-fit"
+            className="mt-6 flex justify-center rounded bg-primary px-4 py-3 text-lg font-medium text-white"
           >
-            Submit
+            {loader ? (
+              <p className="flex items-center gap-2">
+                Sending <FaSpinner className="text-xl animate-spin" />
+              </p>
+            ) : (
+              "Send Message"
+            )}
           </button>
         </form>
+
         {/* Google Map */}
         <div className="lg:w-1/2">
           <iframe
