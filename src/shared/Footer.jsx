@@ -77,6 +77,10 @@ export default function Footer() {
       name: "Career",
       link: "/career",
     },
+    {
+      name: "Blogs",
+      link: "/blogs",
+    },
   ];
 
   return (

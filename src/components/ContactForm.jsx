@@ -174,8 +174,6 @@ const ContactForm = () => {
       message: "",
       captchaInput: "",
     });
-
-    console.log(formData);
   };
 
   return (

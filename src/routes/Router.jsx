@@ -7,40 +7,45 @@ import BusinessEmail from "../pages/BusinessEmail";
 import Privacypolicy from "../pages/Privacypolicy";
 import Contact from "../pages/Contact";
 import Security from "../pages/Security";
+import Blogs from "../components/Blogs";
 
 export const router = createBrowserRouter([
-    {
-        path:"/",
-        element:<Main/>,
-        children:[
-            {
-                path:"/",
-                element:<Home/>
-            },
-            {
-                path :"/about",
-                element:<About/>
-            },
-            {
-                path :"/private",
-                element:<PrivateEmail/>
-            },
-            {
-                path :"/business",
-                element:<BusinessEmail/>
-            },
-            {
-                path :"/privacypolicy",
-                element:<Privacypolicy/>
-            },
-            {
-                path :"/contact",
-                element:<Contact/>
-            },
-            {
-                path :"/security",
-                element:<Security/>
-            },
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <Main />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/private",
+        element: <PrivateEmail />,
+      },
+      {
+        path: "/business",
+        element: <BusinessEmail />,
+      },
+      {
+        path: "/privacypolicy",
+        element: <Privacypolicy />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/security",
+        element: <Security />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+    ],
+  },
+]);
