@@ -64,7 +64,7 @@ export default function About() {
   ];
 
   return (
-    <section className="flex flex-col gap-10 mx-5 md:container md:mx-auto my-10">
+    <section className="px-5 flex flex-col gap-10 mx-5 md:container md:mx-auto my-10">
       {About.map((content, i) => (
         <div
           key={i}

@@ -8,6 +8,7 @@ import Privacypolicy from "../pages/Privacypolicy";
 import Contact from "../pages/Contact";
 import Security from "../pages/Security";
 import Blogs from "../components/Blogs";
+import Payment from "../pages/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
       },
     ],
   },

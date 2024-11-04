@@ -86,23 +86,23 @@ export default function Footer() {
   return (
     <footer>
       {/* email joining section */}
-      <section className="py-10 bg-primary text-white text-center md:py-20">
-        <div className="md:mx-auto md:container">
-          <h2 className="text-2xl lg:text-5xl font-semibold tracking-wider">
+      <section className="bg-primary py-10 text-center text-white md:px-5 md:py-20">
+        <div className="md:container md:mx-auto">
+          <h2 className="text-2xl font-semibold tracking-wider lg:text-5xl">
             Join BFINIT Cosmopolitan
           </h2>
           <p className="mt-2 text-lg tracking-wide">
             Enjoy up to 2 Months Free with Your Subscription!
           </p>
-          <div className="mx-auto mt-8 text-black flex items-center justify-center w-3/4 md:w-2/5">
+          <div className="mx-auto mt-8 flex w-3/4 items-center justify-center text-black md:w-2/5">
             <input
-              className="w-full rounded-l px-4 py-2.5 outline-none shadow"
+              className="w-full rounded-l px-4 py-2.5 shadow outline-none"
               type="email"
               placeholder="Enter your Email"
             />
             <button
               type="submit"
-              className="rounded-r bg-[#6a93fc] px-4 py-2.5 text-white transition-all ease-in-out duration-200 shadow hover:bg-blue-500"
+              className="rounded-r bg-[#6a93fc] px-4 py-2.5 text-white shadow transition-all duration-200 ease-in-out hover:bg-blue-500"
             >
               Subscribe
             </button>
@@ -111,14 +111,14 @@ export default function Footer() {
       </section>
 
       {/* footer section */}
-      <section className="bg-[#001a20] text-white">
-        <div className="py-10 mx-5 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 md:py-28 md:mx-auto md:container">
+      <section className="bg-[#001a20] text-white md:px-5">
+        <div className="mx-5 grid grid-cols-1 gap-8 py-10 md:container md:mx-auto md:grid-cols-2 md:py-28 lg:grid-cols-4">
           <div className="">
             <Link to={"/"}>
               <img className="w-44" src={logo} alt="bobosoho logo" />
             </Link>
             <p className="mt-3 text-2xl">By BFINIT Cosmopolitan</p>
-            <p className="mt-3 mb-6">
+            <p className="mb-6 mt-3">
               Securely connecting you with seamless email and chat for personal
               and business communication.
             </p>
@@ -133,7 +133,7 @@ export default function Footer() {
           {/* hosting products */}
           <div>
             <h1 className="font-semibold">Hosting Products</h1>
-            <div className="flex flex-col gap-2 ml-2 mt-2">
+            <div className="ml-2 mt-2 flex flex-col gap-2">
               {hostingProducts.map((product, i) => (
                 <Link to={product.link} key={i} className="flex gap-2.5">
                   {product.name}
@@ -144,7 +144,7 @@ export default function Footer() {
           {/* other products */}
           <div>
             <h1 className="font-semibold">Other Products</h1>
-            <div className="flex flex-col gap-2 ml-2 mt-2">
+            <div className="ml-2 mt-2 flex flex-col gap-2">
               {Products.map((product, i) => (
                 <Link to={product.link} key={i} className="flex gap-2.5">
                   {product.name}
@@ -155,7 +155,7 @@ export default function Footer() {
           {/* pages */}
           <div>
             <h1 className="font-semibold">Quick Links to BFINIT</h1>
-            <div className="flex flex-col gap-2 ml-2 mt-2">
+            <div className="ml-2 mt-2 flex flex-col gap-2">
               {Pages.map((product, i) => (
                 <Link to={product.link} key={i} className="flex gap-2.5">
                   {product.name}

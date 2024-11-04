@@ -52,15 +52,15 @@ const featuresData = [
 
 const PrivateFeature = () => {
   return (
-    <section className="mx-5 md:container md:mx-auto">
+    <section className="px-5 md:container md:mx-auto">
       {featuresData.map((feature, index) => (
         <div
           key={index}
-          className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between p-10 lg:p-20 h-auto lg:h-[100vh] lg:mt-0"
+          className="py-10 min-h-screen h-full flex flex-col items-center gap-10 lg:py-20 lg:flex-row lg:justify-between"
         >
           {/* Alternate layout based on the index for large devices */}
           <div
-            className={`lg:w-1/2 flex justify-center  bg-origin-border  ${
+            className={`lg:w-1/2 flex justify-center bg-origin-border ${
               index % 2 === 0 ? "order-1" : "order-2"
             } mt-10 lg:mt-0`}
           >

@@ -49,28 +49,28 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-[-2px] border-b border-blue-50 bg-white z-50 shadow">
-      <section className="py-3 mx-5 md:container md:mx-auto flex justify-between items-center">
+    <nav className="sticky top-[-2px] z-50 border-b border-blue-50 bg-white shadow md:px-5">
+      <section className="mx-5 flex items-center justify-between py-3 md:container md:mx-auto">
         {/* logo here  */}
         <Link to="/" className="flex items-center">
           <img src={logo} className="h-10" alt="bobosoho logo" />
         </Link>
         {/* desktop view  */}
-        <ul className="hidden lg:flex lg:gap-6 lg:items-center">
+        <ul className="hidden lg:flex lg:items-center lg:gap-6">
           {MenuItems.map((mi, i) => (
             <li key={i}>
               {mi.child ? (
-                <div className="relative group">
-                  <span className="flex items-center gap-1 cursor-pointer">
+                <div className="group relative">
+                  <span className="flex cursor-pointer items-center gap-1">
                     {mi.name}
                     <BiChevronDown className="text-2xl" />
                   </span>
-                  <div className="absolute bg-white left-0 p-5 shadow rounded min-w-[250px] px-5 hidden group-hover:flex flex-col gap-2">
+                  <div className="absolute left-0 hidden min-w-[250px] flex-col gap-2 rounded bg-white p-5 px-5 shadow group-hover:flex">
                     {mi.child.map((mc, i) => (
                       <Link
                         to={mc.link}
                         key={i}
-                        className="flex gap-1.5 text-gray-600 transition-all ease-in-out duration-200 hover:text-black"
+                        className="flex gap-1.5 text-gray-600 transition-all duration-200 ease-in-out hover:text-black"
                       >
                         {/* <BiChevronRight className="text-2xl" /> */}
                         <span className="flex-1">{mc.name}</span>
@@ -103,25 +103,25 @@ export default function Navbar() {
           </button>
         )}
         {showNav && (
-          <div className="lg:hidden p-5 md:px-14 flex flex-col gap-4 absolute top-16 left-0 shadow-sm bg-white min-w-full transition-all ease-in-out duration-700 pt-10 h-[60vh]">
+          <div className="absolute left-0 top-16 flex h-[60vh] min-w-full flex-col gap-4 bg-white p-5 pt-10 shadow-sm transition-all duration-700 ease-in-out md:px-14 lg:hidden">
             {MenuItems.map((mi, i) => (
               <div key={i}>
                 {mi.child ? (
                   <div>
-                    <div className="text-[18px] flex justify-between items-center">
+                    <div className="flex items-center justify-between text-[18px]">
                       {mi.name}
 
                       {showChild !== i ? (
                         <button
                           onClick={() => setShowChild(i)}
-                          className="flex items-center gap-1 cursor-pointer"
+                          className="flex cursor-pointer items-center gap-1"
                         >
                           <BiChevronDown className="text-3xl" />
                         </button>
                       ) : (
                         <button
                           onClick={() => setShowChild("")}
-                          className="flex items-center gap-1 cursor-pointer"
+                          className="flex cursor-pointer items-center gap-1"
                         >
                           <BiChevronUp className="text-3xl" />
                         </button>
@@ -135,7 +135,7 @@ export default function Navbar() {
                             to={mc.link}
                             key={i}
                             onClick={() => setShowNav(!showNav)}
-                            className="text-[18px] flex gap-1.5"
+                            className="flex gap-1.5 text-[18px]"
                           >
                             <BiChevronRight className="text-2xl" />
                             {mc.name}
@@ -149,7 +149,7 @@ export default function Navbar() {
                     to={mi.link}
                     key={i}
                     onClick={() => setShowNav(!showNav)}
-                    className="text-[18px] flex justify-between items-center"
+                    className="flex items-center justify-between text-[18px]"
                   >
                     {mi.name}
                     {/* <MdArrowOutward /> */}
