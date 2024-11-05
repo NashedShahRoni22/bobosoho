@@ -13,7 +13,7 @@ export default function usePaymentCalculation(setValue) {
   // Function to update currency rate based on selected currency
   const updateCurrencyRate = useCallback(() => {
     const findCurrencyRate = exchangeRates.find(
-      (curr) => curr[0] === selectedCurrency
+      (curr) => curr[0] === selectedCurrency,
     );
     if (findCurrencyRate) {
       setCurrencyRate(findCurrencyRate[1]);
@@ -51,8 +51,6 @@ export default function usePaymentCalculation(setValue) {
       setDiscount(20);
     } else if (value === "12") {
       setDiscount(33);
-    } else if (value === "coupon") {
-      setDiscount("coupon");
     }
   };
 

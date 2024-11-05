@@ -43,10 +43,6 @@ export default function Footer() {
       link: "https://ifgaap.org/",
     },
     {
-      name: "Ifgaap Acounting & Invoicing",
-      link: "https://ifgaap.org/",
-    },
-    {
       name: "BFINIT Saas Software",
       link: "https://officetools.bobosoho.com/special-software/",
     },
@@ -72,10 +68,6 @@ export default function Footer() {
     {
       name: "Contact Us",
       link: "/contact",
-    },
-    {
-      name: "Career",
-      link: "/career",
     },
     {
       name: "Blogs",

@@ -25,8 +25,14 @@ export default function Payment() {
     "country",
     "address",
   ]);
-  const watchStep2 = watch(["duration", "coupon"]);
-  const watchStep3 = watch(["paymentMethod"]);
+  const watchStep2 = watch(["duration"]);
+  const watchStep3 = watch([
+    "paymentMethod",
+    "bankName",
+    "cardNum",
+    "cardName",
+    "cvv",
+  ]);
   const emailStep1 = watch("customerEmail");
   const selectedCurrency = watch("currency");
 

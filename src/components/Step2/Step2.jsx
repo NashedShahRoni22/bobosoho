@@ -19,12 +19,7 @@ export default function Step2({
     originalAmount,
   } = usePaymentCalculation(setValue);
 
-  // Check if the coupon field is visible and has a value if required
-  const isCouponValid =
-    watchStep2[0] === "coupon"
-      ? watchStep2[1] && watchStep2[1].trim() !== ""
-      : true;
-  const isNextEnabled = watchStep2[0] && isCouponValid;
+  const isNextEnabled = watchStep2.every(Boolean);
 
   return (
     <>
@@ -91,22 +86,8 @@ export default function Step2({
             <option value={1}>1 Months</option>
             <option value={6}>6 Months (20% Discount)</option>
             <option value={12}>12 Months (33% Discount)</option>
-            <option value={"coupon"}>12 Months with coupon code</option>
           </select>
         </div>
-
-        {watchStep2[0] === "coupon" && (
-          <div className="col-span-12">
-            <label htmlFor="coupon">Enter Coupon Code *</label>
-            <input
-              className="mt-3 w-full rounded border px-4 py-2 outline-none focus:border-black"
-              type="text"
-              id="coupon"
-              placeholder="Enter Coupon"
-              {...register("coupon", { required: watchStep2[0] === "coupon" })}
-            />
-          </div>
-        )}
 
         <div className="col-span-12 md:col-span-6">
           <label htmlFor="payableAmount">Payable Amount</label>
