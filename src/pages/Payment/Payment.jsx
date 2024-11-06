@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import StepsHighlight from "../../components/StepsHighlight/StepsHighlight";
-import Step1 from "../../components/Step1/Step1";
-import Step2 from "../../components/Step2/Step2";
-import Step3 from "../../components/Step3/Step3";
+import StepsHighlight from "./StepsHighlight/StepsHighlight";
+import Step1 from "./Step1/Step1";
+import Step2 from "./Step2/Step2";
+import Step3 from "./Step3/Step3";
 
 export default function Payment() {
   const [step, setStep] = useState(1);

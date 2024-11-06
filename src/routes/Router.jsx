@@ -2,14 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import PrivateEmail from "../pages/PrivateEmail/PrivateEmail";
-import BusinessEmail from "../pages/BusinessEmail";
 import Privacypolicy from "../pages/Privacypolicy";
 import Contact from "../pages/Contact";
 import Security from "../pages/Security";
 import Blogs from "../components/Blogs";
 import Payment from "../pages/Payment/Payment";
-import PrivateEmailOld from "../pages/PrivateEmailOld";
+import EmailOverview from "../pages/EmailOverview/EmailOverview";
 
 export const router = createBrowserRouter([
   {
@@ -26,15 +24,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/private",
-        element: <PrivateEmail />,
-      },
-      {
-        path: "/private-old",
-        element: <PrivateEmailOld />,
+        element: <EmailOverview />,
       },
       {
         path: "/business",
-        element: <BusinessEmail />,
+        element: <EmailOverview />,
       },
       {
         path: "/privacypolicy",

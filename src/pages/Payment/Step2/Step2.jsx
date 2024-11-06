@@ -1,5 +1,5 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import usePaymentCalculation from "../../hooks/usePaymentCalculation";
+import usePaymentCalculation from "../../../hooks/usePaymentCalculation";
 
 export default function Step2({
   register,

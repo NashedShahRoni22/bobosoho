@@ -1,7 +1,7 @@
-import Navbar from "../shared/Navbar";
+import Navbar from "../components/shared/Navbar";
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import Footer from "../shared/Footer";
-import ContactInfo from "../shared/ContactInfo";
+import Footer from "../components/shared/Footer";
+import ContactInfo from "../components/shared/ContactInfo";
 
 export default function Main() {
   return (

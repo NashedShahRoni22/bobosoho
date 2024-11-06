@@ -3,7 +3,7 @@ import { BiChevronDown, BiChevronRight, BiChevronUp } from "react-icons/bi";
 import { CgClose } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/bobosoho.jpg";
+import logo from "../../assets/bobosoho.jpg";
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);

@@ -1,4 +1,4 @@
-import logo from "../assets/bobosoho.jpg";
+import logo from "../../assets/bobosoho.jpg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {

@@ -1,8 +1,8 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import paypalIcon from "../../assets/icons/paypal.svg";
-import stripeIcon from "../../assets/icons/stripe-s.svg";
-import bankIcon from "../../assets/icons/bank.svg";
-import keyIcon from "../../assets/icons/key.svg";
+import paypalIcon from "../../../assets/icons/paypal.svg";
+import stripeIcon from "../../../assets/icons/stripe-s.svg";
+import bankIcon from "../../../assets/icons/bank.svg";
+import keyIcon from "../../../assets/icons/key.svg";
 
 export default function Step3({ register, watchStep3, setStep }) {
   const paymentMethod = watchStep3[0];
