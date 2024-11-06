@@ -78,7 +78,7 @@ export default function Footer() {
   return (
     <footer>
       {/* email joining section */}
-      <section className="bg-primary py-10 text-center text-white md:px-5 md:py-20">
+      <section className="bg-electricViolet py-10 text-center text-white md:px-5 md:py-20">
         <div className="md:container md:mx-auto">
           <h2 className="text-2xl font-semibold tracking-wider lg:text-5xl">
             Join BFINIT Cosmopolitan
@@ -103,7 +103,7 @@ export default function Footer() {
       </section>
 
       {/* footer section */}
-      <section className="bg-[#001a20] text-white md:px-5">
+      <section className="bg-primary text-white md:px-5">
         <div className="mx-5 grid grid-cols-1 gap-8 py-10 md:container md:mx-auto md:grid-cols-2 md:py-28 lg:grid-cols-4">
           <div className="">
             <Link to={"/"}>

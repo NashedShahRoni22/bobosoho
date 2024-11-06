@@ -49,7 +49,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-[-2px] z-50 border-b border-blue-50 bg-white shadow md:px-5">
+    <nav className="sticky top-[-2px] z-50 bg-primary text-white shadow md:px-5">
       <section className="mx-5 flex items-center justify-between py-3 md:container md:mx-auto">
         {/* logo here  */}
         <Link to="/" className="flex items-center">
@@ -87,7 +87,7 @@ export default function Navbar() {
           ))}
           <Link
             to="/login"
-            className="rounded bg-primary px-4 py-2 text-white shadow"
+            className="bg-electricViolet rounded-full px-6 py-2 text-white shadow"
           >
             Log In
           </Link>

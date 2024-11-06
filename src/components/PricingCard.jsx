@@ -43,14 +43,14 @@ export default function PricingCard({ details }) {
 
       <Link
         to={purchaseLink}
-        className="group flex items-center justify-center rounded-full border px-5 py-3 hover:border-primary md:px-5 lg:text-xl"
+        className="hover:border-electricViolet group flex items-center justify-center rounded-full border px-5 py-3 md:px-5 lg:text-xl"
       >
         <span className="flex items-center px-3">
           <span className="transition-transform duration-300 group-hover:-translate-x-2">
             Get Mail Essentials
           </span>
         </span>
-        <FaArrowRight className="-ml-3 text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <FaArrowRight className="text-electricViolet -ml-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </Link>
 
       {/* features details */}

@@ -286,7 +286,7 @@ export default function EmailPricing() {
   const personalUser = useIsPersonal();
 
   return (
-    <div className="min-h-screen w-full bg-[#1b1340] text-white">
+    <div className="min-h-screen w-full bg-primary text-white">
       <SectionWrapper>
         <h2 className="text-center text-4xl font-medium capitalize md:text-5xl">
           Choose a plan & start protecting <br /> your{" "}

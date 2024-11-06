@@ -1,13 +1,13 @@
 import { FaRegCircleCheck } from "react-icons/fa6";
 import banner2 from "../assets/LandingBanner2.png";
 import banner3 from "../assets/features/collab-business-email.png";
-import banner4 from "../assets/spam.png";
+import banner4 from "../assets/anti-spam.png";
 
 const featuresData = [
   {
     title: [
       "Secured, private, user friendly social environment for ",
-      <span key="bobosoho" className="text-primary">
+      <span key="bobosoho" className="text-electricViolet">
         email and chat sharing
       </span>,
     ],
@@ -23,7 +23,7 @@ const featuresData = [
   {
     title: [
       "Bobosoho is a collaboration platform for ",
-      <span key="bobosoho" className="text-primary">
+      <span key="bobosoho" className="text-electricViolet">
         Private & Business use
       </span>,
     ],
@@ -43,7 +43,7 @@ const featuresData = [
   {
     title: [
       "The Most ",
-      <span key="secured" className="text-primary">
+      <span key="secured" className="text-electricViolet">
         Secured Email{" "}
       </span>,
       "chat share",
@@ -65,30 +65,30 @@ export default function Features() {
       {featuresData.map((feature, index) => (
         <div
           key={index}
-          className="py-10 min-h-screen flex flex-col gap-16 items-center justify-between md:py-20 lg:flex-row"
+          className="flex min-h-screen flex-col items-center justify-between gap-16 py-10 md:py-20 lg:flex-row"
         >
           {/* Alternate layout based on the index for large devices */}
           <div
-            className={`lg:w-1/2  ${
+            className={`lg:w-1/2 ${
               index % 2 === 0 ? "order-2 lg:order-1" : "order-1 lg:order-2"
             } `}
           >
             <img
               src={feature.image}
               alt={`${feature.title} Example`}
-              className="w-full h-fit"
+              className="h-fit w-full"
             />
           </div>
 
           <div
-            className={`lg:w-1/2  text-left ${
+            className={`text-left lg:w-1/2 ${
               index % 2 === 0 ? "order-2" : "order-1"
             }`}
           >
-            <h1 className="text-4xl leading-normal font-semibold capitalize">
+            <h1 className="text-4xl font-semibold capitalize leading-normal">
               {feature.title}
             </h1>
-            <p className="pt-3 pb-6 text-lg text-gray-600">
+            <p className="pb-6 pt-3 text-lg text-gray-600">
               {feature.description}
             </p>
             <ul className="space-y-4 text-lg text-gray-600">

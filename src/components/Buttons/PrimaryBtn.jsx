@@ -5,7 +5,7 @@ export default function PrimaryBtn({ link, bgFill, children }) {
   return (
     <Link
       to={link}
-      className={`group inline-flex items-center rounded-full border px-5 py-3.5 font-semibold text-black md:px-5 lg:text-xl ${bgFill && "border-transparent bg-gradient-to-r from-primary/10 to-primary/40"} ${!bgFill && "border-primary/50 from-primary/10 to-primary/40 hover:border-transparent hover:bg-gradient-to-r"}`}
+      className={`group inline-flex items-center rounded-full border px-5 py-3.5 font-semibold md:px-5 lg:text-xl ${bgFill && "from-electricViolet border-transparent bg-gradient-to-r to-[#9055ff] text-white"} ${!bgFill && "border-electricViolet from-electricViolet to-[#9055ff] hover:border-transparent hover:bg-gradient-to-r hover:text-white"}`}
     >
       <span className="flex items-center px-3">
         <span className="transition-transform duration-300 group-hover:-translate-x-2">
