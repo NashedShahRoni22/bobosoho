@@ -286,14 +286,14 @@ export default function EmailPricing() {
   const personalUser = useIsPersonal();
 
   return (
-    <div className="min-h-screen w-full bg-primary text-white">
+    <div className="min-h-screen bg-primary text-white">
       <SectionWrapper>
         <h2 className="text-center text-4xl font-medium capitalize md:text-5xl">
           Choose a plan & start protecting <br /> your{" "}
           {personalUser ? "Personal" : "Business"} data
         </h2>
 
-        <div className="mx-auto mt-20 grid w-full max-w-4xl grid-cols-12 items-center justify-center gap-16">
+        <div className="mx-auto mt-20 grid grid-cols-12 gap-y-16 md:max-w-4xl md:gap-x-16">
           {(personalUser ? personalPricing : businessPricing).map(
             (details, i) => (
               <PricingCard key={i} details={details} />

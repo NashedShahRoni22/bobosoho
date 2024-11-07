@@ -14,7 +14,7 @@ export default function EmailFeatures() {
         {personalUser ? "personal" : "business"} privacy
       </h2>
 
-      <div className="mt-16 grid grid-cols-12 gap-8">
+      <div className="mt-16 grid grid-cols-12 gap-y-8 md:gap-x-8">
         {(personalUser ? personalEmailFeat : businessEmailFeat).map((feat) => (
           <FeatCard key={feat.id} feat={feat} />
         ))}
