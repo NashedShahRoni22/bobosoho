@@ -15,7 +15,7 @@ export default function Banner() {
           Instantly share messages, photos, videos, & documents with family &
           friends.
         </p>
-        <div className="space-x-4 text-lg font-medium">
+        <div className="space-x-4 space-y-4 text-lg font-medium">
           <PrimaryBtn to="/business" bgFill={true}>
             More Features
           </PrimaryBtn>

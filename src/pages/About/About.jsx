@@ -9,7 +9,7 @@ export default function About() {
       {/* Banner Section */}
       <section
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(10, 0, 50, 0.9)), url(${aboutBannerImg})`,
+          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(10, 0, 50, 0.7)), url(${aboutBannerImg})`,
         }}
         className="flex min-h-[75vh] flex-col justify-center px-5 py-10 md:min-h-[90vh] md:py-20"
       >
@@ -42,7 +42,7 @@ export default function About() {
           <img
             src={aboutImg}
             alt="people walking"
-            className="h-full w-full object-cover"
+            className="h-96 w-full rounded-md object-cover md:h-full"
           />
         </div>
       </section>

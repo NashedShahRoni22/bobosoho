@@ -5,10 +5,10 @@ export default function AboutOverview() {
   return (
     <section className="bg-[#f8f6ff] py-10 md:py-20">
       <div className="flex w-full flex-col items-center md:mx-auto md:max-w-[1536px] md:flex-row">
-        <div className="md:w-1/2">
+        <div className="mb-8 px-5 md:mt-0 md:w-1/2 md:px-0">
           <img src={about1Img} alt="" />
         </div>
-        <div className="pl-8 md:w-1/2 md:pl-16">
+        <div className="px-5 md:w-1/2 md:pl-16 md:pr-0">
           <h2 className="text-4xl text-neutral-800">
             Built to Simplify Payroll for Every Business
           </h2>
@@ -22,7 +22,7 @@ export default function AboutOverview() {
         </div>
       </div>
       <div className="mt-24 flex w-full flex-col items-center md:mx-auto md:max-w-[1536px] md:flex-row">
-        <div className="pl-8 md:w-1/2 md:px-16">
+        <div className="px-5 md:w-1/2 md:px-16">
           <h2 className="text-4xl text-neutral-800">
             Designed for Modern Businesses, Built to Simplify Payroll
           </h2>
@@ -39,8 +39,8 @@ export default function AboutOverview() {
             rapidly evolving digital landscape.
           </p>
         </div>
-        <div className="md:w-1/2">
-          <img src={about2Img} alt="" />
+        <div className="mt-8 px-5 md:mt-0 md:w-1/2 md:px-0">
+          <img src={about2Img} alt="" className="rounded-md" />
         </div>
       </div>
     </section>

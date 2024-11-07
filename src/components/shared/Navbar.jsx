@@ -103,7 +103,7 @@ export default function Navbar() {
           </button>
         )}
         {showNav && (
-          <div className="absolute left-0 top-16 flex h-[60vh] min-w-full flex-col gap-4 border bg-primary p-5 pt-10 text-white shadow-sm transition-all duration-700 ease-in-out md:px-14 lg:hidden">
+          <div className="absolute left-0 top-16 flex h-[60vh] min-w-full flex-col gap-4 bg-primary p-5 pt-10 text-white shadow-sm transition-all duration-700 ease-in-out md:px-14 lg:hidden">
             {MenuItems.map((mi, i) => (
               <div key={i}>
                 {mi.child ? (

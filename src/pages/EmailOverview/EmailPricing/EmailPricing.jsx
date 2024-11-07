@@ -23,7 +23,7 @@ import useIsPersonal from "../../../hooks/useIsPersonal";
 const personalPricing = [
   {
     title: "Mail Essentials",
-    price: "€ 3.00",
+    price: "€ 2.00",
     purchaseLink: "/business",
     type: {
       Icon: CiUser,
