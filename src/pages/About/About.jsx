@@ -1,7 +1,7 @@
 import AboutServices from "./AboutServices/AboutServices";
-import aboutImg from "../../assets/about.png";
-import aboutBannerImg from "../../assets/about-banner.png";
 import AboutOverview from "./AboutOverview/AboutOverview";
+import bannerImg from "../../assets/about-page/banner.png";
+import connectionsImg from "../../assets/about-page/true-connections.png";
 
 export default function About() {
   return (
@@ -9,7 +9,7 @@ export default function About() {
       {/* Banner Section */}
       <section
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(10, 0, 50, 0.7)), url(${aboutBannerImg})`,
+          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(10, 0, 50, 0.7)), url(${bannerImg})`,
         }}
         className="flex min-h-[75vh] flex-col justify-center px-5 py-10 md:min-h-[90vh] md:py-20"
       >
@@ -20,9 +20,8 @@ export default function About() {
             <span className="text-electricViolet">digital freedom</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-neutral-100">
-            Bobosoho was founded in France in 2019 to develop business and
-            financial software, redefining digital solutions for both
-            enterprises and individuals.
+            Bobosoho values your privacy, ensuring that your chats and shared
+            content are fully secure and accessible only through your profile.
           </p>
         </div>
       </section>
@@ -33,14 +32,21 @@ export default function About() {
       {/* About Overview Section */}
       <AboutOverview />
 
+      {/* Connection & Privacy Section */}
       <section className="min-h-[90vh] bg-gradient-to-b from-[#f7f5ff] via-white to-[#f7f5ff] px-5 py-10 md:py-20">
         <div className="md:container md:mx-auto">
-          <h2 className="mb-16 text-center text-4xl font-medium text-neutral-800">
-            Internet for the <span className="text-electricViolet">people</span>
-            , by the <br /> <span className="text-electricViolet">people</span>
+          <h2 className="text-center text-4xl font-medium text-neutral-800">
+            Internet for True{" "}
+            <span className="text-electricViolet"> Connections</span>
+            <br /> & <span className="text-electricViolet">Privacy</span>
           </h2>
+          <p className="mx-auto mb-16 mt-6 max-w-xl text-center text-lg text-neutral-700">
+            Internet for the people, connecting true friends and family with
+            privacy and security. Bobosoho fosters a respectful space, free from
+            intimidation and insults.
+          </p>
           <img
-            src={aboutImg}
+            src={connectionsImg}
             alt="people walking"
             className="h-96 w-full rounded-md object-cover md:h-full"
           />

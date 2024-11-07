@@ -1,5 +1,5 @@
 import PrimaryBtn from "./buttons/primaryBtn";
-import shocking from "../assets/LandingBanner.png";
+import bannerImg from "../assets/home-page/banner.png";
 
 export default function Banner() {
   return (
@@ -25,7 +25,7 @@ export default function Banner() {
 
       {/* Right Side: Image */}
       <div className="lg:w-1/2">
-        <img className=" " src={shocking} alt="Email platform" />
+        <img className=" " src={bannerImg} alt="Email platform" />
       </div>
     </section>
   );

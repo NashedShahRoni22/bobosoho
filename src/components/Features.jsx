@@ -1,8 +1,8 @@
 import { FaRegCircleCheck } from "react-icons/fa6";
-import banner2 from "../assets/LandingBanner2.png";
-import banner3 from "../assets/landing-banner-2.png";
-import banner4 from "../assets/anti-spam.png";
-import banner5 from "../assets/landing-banner-5.png";
+import feat1Img from "../assets/home-page/feat-1.png";
+import feat2Img from "../assets/home-page/feat-2.png";
+import feat3Img from "../assets/home-page/feat-3.png";
+import feat4Img from "../assets/home-page/feat-4.png";
 
 const featuresData = [
   {
@@ -19,7 +19,7 @@ const featuresData = [
       "Real-Time Updates: Keep track of new messages with real-time notifications and an intuitive inbox layout.",
       "Seamless Navigation: Switch between contacts, settings, and other features using the sidebar, making email management a breeze.",
     ],
-    image: banner2,
+    image: feat1Img,
   },
   {
     title: [
@@ -39,7 +39,7 @@ const featuresData = [
       "Spam Managing: Spam manager controlling who and what you want to receive in your inbox box.",
       "Easy to save: Easy to save messages in new create categories like save files and each to delete spam, unwanted messages with all select delete instantly ",
     ],
-    image: banner5,
+    image: feat2Img,
   },
   {
     title: [
@@ -56,7 +56,7 @@ const featuresData = [
       "Secure Access:Bobosoho respects your data, its yours, your space no sharing of data totally ",
       "Threat Detection: Detect and block unauthorized access attempts with real-time monitoring.",
     ],
-    image: banner4,
+    image: feat3Img,
   },
   {
     title: [
@@ -76,7 +76,7 @@ const featuresData = [
       "Group-Friendly Features: Publish videos and connect with unlimited contacts.",
       "Zero Tolerance Policy: Strong protection against intimidation and misuse for a safe environment.",
     ],
-    image: banner3,
+    image: feat4Img,
   },
 ];
 

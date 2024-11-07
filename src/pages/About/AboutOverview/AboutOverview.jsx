@@ -1,12 +1,12 @@
-import about1Img from "../../../assets/about.webp";
-import about2Img from "../../../assets/about-2.webp";
+import feat1Img from "../../../assets/about-page/feature-1.webp";
+import feat2Img from "../../../assets/about-page/feature-2.webp";
 
 export default function AboutOverview() {
   return (
     <section className="bg-[#f8f6ff] py-10 md:py-20">
       <div className="flex w-full flex-col items-center md:mx-auto md:max-w-[1536px] md:flex-row">
         <div className="mb-8 px-5 md:mt-0 md:w-1/2 md:px-0">
-          <img src={about1Img} alt="" />
+          <img src={feat1Img} alt="" />
         </div>
         <div className="px-5 md:w-1/2 md:pl-16 md:pr-0">
           <h2 className="text-4xl text-neutral-800">
@@ -40,7 +40,7 @@ export default function AboutOverview() {
           </p>
         </div>
         <div className="mt-8 px-5 md:mt-0 md:w-1/2 md:px-0">
-          <img src={about2Img} alt="" className="rounded-md" />
+          <img src={feat2Img} alt="" className="rounded-md" />
         </div>
       </div>
     </section>
