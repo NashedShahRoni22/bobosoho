@@ -139,7 +139,7 @@ export default function Step2({
       {/* Form Step Changing Buttons */}
       <div className="mt-14 flex justify-center gap-12">
         <button
-          className="flex items-center gap-1 text-lg font-semibold text-primary transition-all duration-200 ease-in-out"
+          className="flex items-center gap-1 text-lg font-semibold text-electricViolet transition-all duration-200 ease-in-out"
           onClick={() => setStep(1)}
         >
           <MdKeyboardArrowLeft className="mt-0.5 text-2xl" />
@@ -147,8 +147,10 @@ export default function Step2({
         </button>
 
         <button
-          className={`rounded border border-primary px-6 py-1.5 text-lg font-semibold ${
-            isNextEnabled ? "bg-primary text-white" : "bg-white"
+          className={`rounded border px-6 py-1.5 text-lg font-semibold ${
+            isNextEnabled
+              ? "border-electricViolet bg-electricViolet text-white"
+              : "border-electricViolet/50 bg-white text-neutral-500"
           }`}
           onClick={() => setStep(3)}
           disabled={!isNextEnabled}

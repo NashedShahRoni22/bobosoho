@@ -1,7 +1,8 @@
 import { FaRegCircleCheck } from "react-icons/fa6";
 import banner2 from "../assets/LandingBanner2.png";
-import banner3 from "../assets/features/collab-business-email.png";
+import banner3 from "../assets/landing-banner-2.png";
 import banner4 from "../assets/anti-spam.png";
+import banner5 from "../assets/landing-banner-5.png";
 
 const featuresData = [
   {
@@ -38,7 +39,7 @@ const featuresData = [
       "Spam Managing: Spam manager controlling who and what you want to receive in your inbox box.",
       "Easy to save: Easy to save messages in new create categories like save files and each to delete spam, unwanted messages with all select delete instantly ",
     ],
-    image: banner3,
+    image: banner5,
   },
   {
     title: [
@@ -56,6 +57,26 @@ const featuresData = [
       "Threat Detection: Detect and block unauthorized access attempts with real-time monitoring.",
     ],
     image: banner4,
+  },
+  {
+    title: [
+      "The Ultimate ",
+      <span key="secured" className="text-electricViolet">
+        Secure Chat{" "}
+      </span>,
+      "Experience",
+    ],
+    description:
+      "Connect freely and safely with powerful chat features designed to prioritize privacy and convenience, perfect for modern communication.",
+    benefits: [
+      "Unlimited Sharing: Enjoy text, call, and media sharing without limits.",
+      "Privacy-First Communication: No phone number required to connect with friends or groups.",
+      "Flexible Connectivity: Optimized for low Wi-Fi and G-bandwidth usage.",
+      "Instant Media Control: Send images with instant delete options for added security.",
+      "Group-Friendly Features: Publish videos and connect with unlimited contacts.",
+      "Zero Tolerance Policy: Strong protection against intimidation and misuse for a safe environment.",
+    ],
+    image: banner3,
   },
 ];
 

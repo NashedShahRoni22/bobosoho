@@ -1,17 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
+import savePaymentData from "../utils/savePaymentData";
 
 export default function PricingCard({ details }) {
-  const {
-    title,
-    price,
-    purchaseLink,
-    type,
-    highlightedFeat,
-    features,
-    note,
-    otherProducts,
-  } = details;
+  const { title, price, type, highlightedFeat, features, note, otherProducts } =
+    details;
 
   return (
     <div
@@ -38,19 +31,21 @@ export default function PricingCard({ details }) {
       </div>
 
       <p className="mb-4 mt-6 text-center text-sm">
-        <span className="text-3xl font-medium">{price}</span> /year
+        <span className="text-3xl font-medium">{`€ ${price.toFixed(2)}`}</span>{" "}
+        /year
       </p>
 
       <Link
-        to={purchaseLink}
-        className="hover:border-electricViolet group flex items-center justify-center rounded-full border px-5 py-3 md:px-5 lg:text-xl"
+        onClick={() => savePaymentData(details)}
+        to="/payment"
+        className="group flex items-center justify-center rounded-full border px-5 py-3 hover:border-electricViolet md:px-5 lg:text-xl"
       >
         <span className="flex items-center px-3">
           <span className="transition-transform duration-300 group-hover:-translate-x-2">
             Get Mail Essentials
           </span>
         </span>
-        <FaArrowRight className="text-electricViolet -ml-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <FaArrowRight className="-ml-3 text-electricViolet opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </Link>
 
       {/* features details */}

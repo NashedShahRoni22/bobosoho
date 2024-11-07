@@ -131,8 +131,10 @@ export default function Step1({ register, watchStep1, setStep }) {
       {/* Form Step Changing Buttons */}
       <div className="mt-14 flex justify-center">
         <button
-          className={`rounded border border-primary px-6 py-1.5 text-lg font-semibold ${
-            watchStep1.every(Boolean) ? "bg-primary text-white" : "bg-white"
+          className={`rounded border px-6 py-1.5 text-lg font-semibold ${
+            watchStep1.every(Boolean)
+              ? "border-electricViolet bg-electricViolet text-white"
+              : "border-electricViolet/50 bg-white text-neutral-500"
           }`}
           onClick={() => setStep(2)}
           disabled={!watchStep1.every(Boolean)}

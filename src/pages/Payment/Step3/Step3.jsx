@@ -208,7 +208,7 @@ export default function Step3({ register, watchStep3, setStep }) {
       {/* Form Step Changing Buttons */}
       <div className="mt-12 flex justify-center gap-12">
         <button
-          className="flex items-center gap-1 text-lg font-semibold text-primary transition-all duration-200 ease-in-out"
+          className="flex items-center gap-1 text-lg font-semibold text-electricViolet transition-all duration-200 ease-in-out"
           onClick={() => setStep(2)}
         >
           <MdKeyboardArrowLeft className="mt-0.5 text-2xl" />
@@ -218,8 +218,8 @@ export default function Step3({ register, watchStep3, setStep }) {
         <button
           className={`rounded border px-6 py-1.5 text-lg font-semibold ${
             isFormValid()
-              ? "border-primary bg-primary text-white"
-              : "border-primary/40 bg-white text-gray-400"
+              ? "border-electricViolet bg-electricViolet text-white"
+              : "border-electricViolet/50 bg-white text-neutral-500"
           }`}
           type="submit"
           disabled={!isFormValid()}

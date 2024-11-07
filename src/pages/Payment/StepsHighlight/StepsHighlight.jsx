@@ -3,19 +3,21 @@ export default function StepsHighlight({ step }) {
     <>
       {/* Highlighted Form Steps */}
       <div className="mx-auto mt-16 flex w-[85%] max-w-3xl justify-between">
-        <div className="flex size-12 items-center justify-center rounded-full bg-primary md:size-10">
+        <div className="flex size-12 items-center justify-center rounded-full bg-electricViolet md:size-10">
           <div className="size-6 rounded-full bg-white md:size-5"></div>
         </div>
 
         <div
           className={`mt-5 h-0.5 w-full flex-1 ${
-            step >= 2 ? "bg-primary" : "bg-gray-200"
+            step >= 2 ? "bg-electricViolet" : "bg-gray-200"
           }`}
         ></div>
 
         <div
           className={`flex size-12 items-center justify-center rounded-full border md:size-10 ${
-            step >= 2 ? "border-primary bg-primary" : "border-gray-200"
+            step >= 2
+              ? "border-electricViole bg-electricViolet"
+              : "border-gray-200"
           }`}
         >
           <div
@@ -27,13 +29,15 @@ export default function StepsHighlight({ step }) {
 
         <div
           className={`mt-5 h-0.5 w-full flex-1 ${
-            step >= 3 ? "bg-primary" : "bg-gray-200"
+            step >= 3 ? "bg-electricViolet" : "bg-gray-200"
           }`}
         ></div>
 
         <div
           className={`flex size-12 items-center justify-center rounded-full border md:size-10 ${
-            step >= 3 ? "border-primary bg-primary" : "border-gray-200"
+            step >= 3
+              ? "border-electricViole bg-electricViolet"
+              : "border-gray-200"
           }`}
         >
           <div
