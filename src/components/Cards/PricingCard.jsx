@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
-import savePaymentData from "../../utils/savePaymentData";
 
 export default function PricingCard({ details }) {
   const { title, price, type, highlightedFeat, features, note, otherProducts } =
@@ -36,8 +35,8 @@ export default function PricingCard({ details }) {
       </p>
 
       <Link
-        onClick={() => savePaymentData(details)}
-        to="/payment"
+        to="https://www.bobosohomail.com/email_ins/signUp_email.php"
+        target="_blanck"
         className="group flex items-center justify-center rounded-full border px-5 py-3 hover:border-electricViolet md:px-5 lg:text-xl"
       >
         <span className="flex items-center px-3">

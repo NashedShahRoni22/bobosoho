@@ -8,6 +8,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import Payment from "../pages/Payment/Payment";
 import EmailOverview from "../pages/EmailOverview/EmailOverview";
 import About from "../pages/About/About";
+import Calling from "../pages/Calling/Calling";
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
       {
         path: "/payment",
         element: <Payment />,
+      },
+      {
+        path: "/calling",
+        element: <Calling />,
       },
     ],
   },

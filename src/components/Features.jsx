@@ -60,21 +60,27 @@ const featuresData = [
   },
   {
     title: [
-      "The Ultimate ",
-      <span key="secured" className="text-electricViolet">
-        Secure Chat{" "}
+      <span key="next-level" className="text-electricViolet">
+        Next-Level Secure{" "}
       </span>,
-      "Experience",
+      "Messaging & Calling",
     ],
     description:
       "Connect freely and safely with powerful chat features designed to prioritize privacy and convenience, perfect for modern communication.",
     benefits: [
+      "Seamless Communication: Effortlessly connect via text, call, and media sharing without limits.",
       "Unlimited Sharing: Enjoy text, call, and media sharing without limits.",
       "Privacy-First Communication: No phone number required to connect with friends or groups.",
       "Flexible Connectivity: Optimized for low Wi-Fi and G-bandwidth usage.",
       "Instant Media Control: Send images with instant delete options for added security.",
       "Group-Friendly Features: Publish videos and connect with unlimited contacts.",
       "Zero Tolerance Policy: Strong protection against intimidation and misuse for a safe environment.",
+    ],
+    note: [
+      <span key={"please note"} className="font-semibold text-black">
+        Please Note:{" "}
+      </span>,
+      "A small charge of $0.60 applies for video/audio calls.",
     ],
     image: feat4Img,
   },
@@ -120,6 +126,7 @@ export default function Features() {
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-lg text-gray-600">{feature?.note}</p>
           </div>
         </div>
       ))}

@@ -1,11 +1,10 @@
 import SectionWrapper from "../../../components/shared/SectionWrapper";
-import PrimaryBtn from "../../../components/buttons/primaryBtn";
 import privateEmail from "../../../assets/private-email.png";
 import useIsPersonal from "../../../hooks/useIsPersonal";
+import { FaArrowRight } from "react-icons/fa6";
 
-export default function EmailBanner() {
+export default function EmailBanner({ handleScrollToSection }) {
   const personalUser = useIsPersonal();
-  const dynamicRoute = personalUser ? "/business" : "/private";
 
   return (
     <SectionWrapper>
@@ -22,9 +21,18 @@ export default function EmailBanner() {
             Simple and Secure, keeping your connections private—no ads, no data
             sharing.
           </p>
-          <PrimaryBtn link={dynamicRoute} bgFill={true}>
-            Get Bobosoho for {personalUser ? "Business" : "Personal"}
-          </PrimaryBtn>
+
+          <button
+            onClick={handleScrollToSection}
+            className={`"border-transparent text-white" group inline-flex items-center rounded-full border bg-gradient-to-r from-electricViolet to-[#9055ff] px-5 py-3.5 font-semibold text-white md:px-5 lg:text-xl`}
+          >
+            <span className="flex items-center px-3">
+              <span className="transition-transform duration-300 group-hover:-translate-x-2">
+                Get Bobosoho for {personalUser ? "Personal" : "Business"}
+              </span>
+            </span>
+            <FaArrowRight className="-ml-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          </button>
         </div>
 
         <div className="flex justify-center lg:w-1/2">

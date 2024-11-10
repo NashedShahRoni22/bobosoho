@@ -4,11 +4,11 @@ import { personalEmailPrice } from "../../../data/personalEmailPrice";
 import { businessEmailPrice } from "../../../data/businessEmailPrice";
 import SectionWrapper from "../../../components/shared/SectionWrapper";
 
-export default function EmailPricing() {
+export default function EmailPricing({ sectionRef }) {
   const personalUser = useIsPersonal();
 
   return (
-    <div className="min-h-screen bg-primary text-white">
+    <div ref={sectionRef} className="min-h-screen bg-primary text-white">
       <SectionWrapper>
         <h2 className="text-center text-4xl font-medium capitalize md:text-5xl">
           Choose a plan & start protecting <br /> your{" "}

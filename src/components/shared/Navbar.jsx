@@ -8,6 +8,7 @@ import {
   MdOutlineBusiness,
   MdOutlineExplore,
   MdOutlineMailLock,
+  MdOutlineVideoCall,
 } from "react-icons/md";
 
 export default function Navbar() {
@@ -45,6 +46,12 @@ export default function Navbar() {
             "Enhanced Email & Chat Collaboration tools designed for Business Teams.",
           Icon: MdOutlineBusiness,
           link: "/business",
+        },
+        {
+          name: "Video/Audio Calls",
+          details: "Secure, High-Quality Video/Audio Calls for only $0.60.",
+          Icon: MdOutlineVideoCall,
+          link: "/calling",
         },
         {
           name: "Discover Bobosoho",

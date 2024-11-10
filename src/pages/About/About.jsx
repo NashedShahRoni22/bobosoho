@@ -9,15 +9,15 @@ export default function About() {
       {/* Banner Section */}
       <section
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(10, 0, 50, 0.7)), url(${bannerImg})`,
+          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.86), rgba(10, 0, 30, 0.95)), url(${bannerImg})`,
         }}
         className="flex min-h-[75vh] flex-col justify-center px-5 py-10 md:min-h-[90vh] md:py-20"
       >
         <div className="md:container md:mx-auto">
           <h1 className="text-center text-4xl font-medium text-white md:text-5xl">
             We believe a better world starts <br /> with{" "}
-            <span className="text-electricViolet">privacy</span> and{" "}
-            <span className="text-electricViolet">digital freedom</span>
+            <span className="text-electricViolet">Privacy</span> and{" "}
+            <span className="text-electricViolet">Digital Freedom</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-neutral-100">
             Bobosoho values your privacy, ensuring that your chats and shared

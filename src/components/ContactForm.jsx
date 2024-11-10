@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa6";
 import Captcha from "./Captcha";
 import { smtpexpressClient } from "../data/smtp";
+import { BiCopyright } from "react-icons/bi";
+import bittsLogo from "../assets/logo/bitts-logo.png";
 
 const ContactForm = () => {
   const navigate = useNavigate();
@@ -178,12 +180,12 @@ const ContactForm = () => {
 
   return (
     <section className="py-10 pb-20">
-      <h2 className="text-5xl text-center font-semibold">Get In Touch</h2>
-      <p className="mt-4 text-lg text-center mx-auto text-gray-600">
+      <h2 className="text-center text-5xl font-semibold">Get In Touch</h2>
+      <p className="mx-auto mt-4 text-center text-lg text-gray-600">
         Fill out the form or find us on the map to get in touch.
       </p>
 
-      <div className="mt-16 flex flex-col lg:flex-row gap-10">
+      <div className="mt-16 flex flex-col gap-10 lg:flex-row">
         {/* Contact Form */}
         <form
           ref={form}
@@ -316,16 +318,28 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="mt-6 flex justify-center rounded bg-primary px-4 py-3 text-lg font-medium text-white"
+            className="mt-6 flex justify-center rounded bg-electricViolet px-4 py-3 text-lg font-medium text-white"
           >
             {loader ? (
               <p className="flex items-center gap-2">
-                Sending <FaSpinner className="text-xl animate-spin" />
+                Sending <FaSpinner className="animate-spin text-xl" />
               </p>
             ) : (
               "Send Message"
             )}
           </button>
+
+          <div className="mt-5">
+            <p className="flex items-center justify-center gap-1 text-xs">
+              <BiCopyright /> 2024 BFIN. BITSS by BFIN. All rights reserved.
+            </p>
+            <div className="mt-2.5 flex flex-col items-center justify-center gap-2.5">
+              <img src={bittsLogo} alt="" />
+              <p className="text-xs">
+                This form is powered by bitss cyber security
+              </p>
+            </div>
+          </div>
         </form>
 
         {/* Google Map */}
