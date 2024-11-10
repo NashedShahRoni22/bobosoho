@@ -5,6 +5,7 @@ import useIsPersonal from "../../../hooks/useIsPersonal";
 
 export default function EmailBanner() {
   const personalUser = useIsPersonal();
+  const dynamicRoute = personalUser ? "/business" : "/private";
 
   return (
     <SectionWrapper>
@@ -21,10 +22,7 @@ export default function EmailBanner() {
             Simple and Secure, keeping your connections private—no ads, no data
             sharing.
           </p>
-          <PrimaryBtn
-            to={`${personalUser ? "/business" : "/private"}`}
-            bgFill={true}
-          >
+          <PrimaryBtn link={dynamicRoute} bgFill={true}>
             Get Bobosoho for {personalUser ? "Business" : "Personal"}
           </PrimaryBtn>
         </div>

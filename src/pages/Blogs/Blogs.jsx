@@ -20,13 +20,16 @@ export default function Blog() {
                 <Link to="/">
                   <img src={data.image} alt="" className="rounded-t border-b" />
                 </Link>
-                <div className="px-4 py-6">
-                  <Link to="/" className="text-xl font-semibold">
+                <div className="px-4 py-6 text-gray-600">
+                  <Link to="/" className="text-xl font-semibold text-black">
                     {data.title}
                   </Link>
                   <p className="mb-4 mt-1">{data.date}</p>
                   <p>{data.description}</p>
-                  <Link to="/" className="mt-4 inline-block text-primary">
+                  <Link
+                    to="/"
+                    className="mt-4 inline-block text-electricViolet"
+                  >
                     Read More
                   </Link>
                 </div>
@@ -37,13 +40,16 @@ export default function Blog() {
                 <Link to="/">
                   <img src={data.image} alt="" className="rounded-t border-b" />
                 </Link>
-                <div className="px-4 py-6">
-                  <Link to="/" className="text-xl font-semibold">
+                <div className="px-4 py-6 text-gray-600">
+                  <Link to="/" className="text-xl font-semibold text-black">
                     {data.title}
                   </Link>
                   <p className="mb-4 mt-1">{data.date}</p>
                   <p>{data.description}</p>
-                  <Link to="/" className="mt-4 inline-block text-primary">
+                  <Link
+                    to="/"
+                    className="mt-4 inline-block text-electricViolet"
+                  >
                     Read More
                   </Link>
                 </div>

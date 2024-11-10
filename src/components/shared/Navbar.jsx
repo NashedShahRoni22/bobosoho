@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import { BiChevronDown, BiChevronRight, BiChevronUp } from "react-icons/bi";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { CgClose } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../assets/bobosoho.jpg";
+import {
+  MdOutlineBusiness,
+  MdOutlineExplore,
+  MdOutlineMailLock,
+} from "react-icons/md";
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
@@ -29,18 +34,25 @@ export default function Navbar() {
       name: "Features",
       child: [
         {
-          name: "Private Emailing",
+          name: "Private Email",
+          details: "Secure & Private Email Platform for Personal Use.",
+          Icon: MdOutlineMailLock,
           link: "/private",
         },
         {
-          name: "Business Emailing",
+          name: "Business Email",
+          details:
+            "Enhanced Email & Chat Collaboration tools designed for Business Teams.",
+          Icon: MdOutlineBusiness,
           link: "/business",
         },
+        {
+          name: "Discover Bobosoho",
+          details: "Your Secure platform for Private Email & Chat.",
+          Icon: MdOutlineExplore,
+          link: "/about",
+        },
       ],
-    },
-    {
-      name: "About Us",
-      link: "/about",
     },
     {
       name: "Contact",
@@ -65,15 +77,20 @@ export default function Navbar() {
                     {mi.name}
                     <BiChevronDown className="text-2xl" />
                   </span>
-                  <div className="absolute left-0 hidden min-w-[250px] flex-col gap-2 rounded bg-white p-5 px-5 shadow group-hover:flex">
+                  <div className="absolute right-0 top-full hidden min-w-96 flex-col gap-2 space-y-4 rounded bg-white px-6 py-5 shadow group-hover:flex">
                     {mi.child.map((mc, i) => (
                       <Link
                         to={mc.link}
                         key={i}
-                        className="flex gap-1.5 text-gray-600 transition-all duration-200 ease-in-out hover:text-black"
+                        className="flex items-center gap-3 text-primary transition-transform duration-200 ease-linear hover:scale-105"
                       >
-                        {/* <BiChevronRight className="text-2xl" /> */}
-                        <span className="flex-1">{mc.name}</span>
+                        {
+                          <mc.Icon className="min-w-fit text-3xl text-electricViolet" />
+                        }
+                        <div>
+                          <p className="text-lg font-medium">{mc.name}</p>
+                          <p className="text-sm">{mc?.details}</p>
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -133,12 +150,17 @@ export default function Navbar() {
                         {mi.child.map((mc, i) => (
                           <Link
                             to={mc.link}
-                            key={i}
                             onClick={() => setShowNav(!showNav)}
-                            className="flex gap-1.5 text-[18px]"
+                            key={i}
+                            className="flex items-center gap-3 text-primary transition-transform duration-200 ease-linear hover:scale-105"
                           >
-                            <BiChevronRight className="text-2xl" />
-                            {mc.name}
+                            {
+                              <mc.Icon className="min-w-fit text-3xl text-electricViolet" />
+                            }
+                            <div>
+                              <p className="text-lg font-medium">{mc.name}</p>
+                              <p className="text-sm">{mc?.details}</p>
+                            </div>
                           </Link>
                         ))}
                       </div>

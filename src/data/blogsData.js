@@ -1,53 +1,53 @@
 export const blogsData = [
   {
-    title: "Benefits of Automating Payroll",
+    title: "Efficient, Secure & User-Friendly Email Sharing Platform",
     description:
-      "Discover how automation can save time, reduce errors, and improve efficiency in your company’s payroll process with Omada HR Payroll.",
+      "Discover how Bobosoho’s secure email & chat platform ensures privacy and enables fast sharing of messages, photos, videos, and documents with friends and family.",
     image: "https://mypihr.com/wp-content/uploads/2024/03/46-2-1.jpg.webp",
-    link: "/blog/benefits-of-automating-payroll",
+    link: "/blog/secure-email-sharing-platform",
     date: "2024-10-15",
   },
   {
-    title: "Multilingual Payslips for Global Teams",
+    title: "Enhanced Project Sharing and Teamwork with Bobosoho",
     description:
-      "Learn how providing multilingual payslips can enhance employee satisfaction and engagement across your diverse workforce.",
+      "Learn how Bobosoho’s collaboration features for private & business use enhance project sharing and streamline teamwork with secure communication tools.",
     image:
       "https://mypihr.com/wp-content/uploads/2022/09/HR-Software-is-important-for-business.jpg.webp",
-    link: "/blog/multilingual-payslips-benefits",
+    link: "/blog/enhanced-project-sharing",
     date: "2024-09-30",
   },
   {
-    title: "The Importance of Time Management",
+    title: "Smart Messaging & Secure File Sharing with Bobosoho",
     description:
-      "Time is money! Explore the significance of effective time management tools and how Omada HR Payroll helps tracking.",
+      "Bobosoho allows instant messaging and secure file sharing with just a few clicks. Explore how our platform boosts communication without compromising security.",
     image: "https://mypihr.com/wp-content/uploads/2022/11/saas.jpg.webp",
-    link: "/blog/importance-of-time-management",
+    link: "/blog/smart-messaging-and-file-sharing",
     date: "2024-10-05",
   },
   {
-    title: "Customized Payslip Design",
+    title: "Create Unlimited Groups & Share Instantly with Bobosoho",
     description:
-      "Create payslips that not only meet compliance requirements but also reflect your company’s brand identity with customized design features.",
+      "With Bobosoho, create unlimited groups and share media instantly. Learn how our platform ensures secure communication with friends, family, and colleagues.",
     image: "https://mypihr.com/wp-content/uploads/2022/10/27.jpg.webp",
-    link: "/blog/customized-payslip-design",
+    link: "/blog/create-unlimited-groups",
     date: "2024-10-10",
   },
   {
-    title: "Top Payroll Software Features",
+    title: "The Most Secured Email and Chat Experience with Bobosoho",
     description:
-      "Before choosing payroll software, make sure it has the right features to simplify your HR processes. Here’s a guide on what to look for.",
+      "Discover how Bobosoho provides the highest level of security with advanced encryption and threat detection, ensuring your private information is safe.",
     image:
       "https://mypihr.com/wp-content/uploads/2022/09/win-employees-trust.jpg.webp",
-    link: "/blog/top-payroll-software-features",
+    link: "/blog/secured-email-chat-experience",
     date: "2024-09-25",
   },
   {
-    title: "Payroll Data Privacy & Security",
+    title: "Bobosoho: Privacy-First Communication for Everyone",
     description:
-      "With sensitive employee data at stake, learn how Omada HR Payroll provides top-notch security and privacy for your payroll processes.",
+      "Explore how Bobosoho’s privacy-first communication features let you connect with others without compromising on security. No phone numbers required to communicate.",
     image:
       "https://mypihr.com/wp-content/uploads/2022/09/HR-Software-benefit-you-financially.jpg.webp",
-    link: "/blog/data-privacy-and-security",
+    link: "/blog/privacy-first-communication",
     date: "2024-09-20",
   },
 ];
