@@ -8,7 +8,7 @@ export default function EmailBanner({ handleScrollToSection }) {
 
   return (
     <SectionWrapper>
-      <div className="flex min-h-screen flex-col gap-16 lg:flex-row">
+      <div className="flex min-h-[65vh] flex-col gap-16 lg:flex-row">
         <div className="lg:w-1/2">
           <p className="text-xl font-medium">
             For {personalUser ? "Personal" : "Business"} User
