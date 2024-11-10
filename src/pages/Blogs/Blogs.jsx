@@ -1,17 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
-import { blogsData } from "../data/blogsData";
+import { blogsData } from "../../data/blogsData";
 
 export default function Blog() {
   const { pathname } = useLocation();
 
   return (
-    <section className="mx-5 min-h-screen pb-60 pt-10 md:pt-20 md:mx-auto md:container">
+    <section className="mx-5 min-h-screen pb-60 pt-10 md:container md:mx-auto md:pt-20">
       <h2 className="text-center text-4xl font-semibold md:text-5xl">
         Recent Blogs & Information
       </h2>
       <p className="mt-6 text-center text-xl font-medium text-gray-600">
-        Get updated with the latest news and information about HRM software in
-        Bangladesh
+        Get updated with the latest news and information from BoboSoho & BFINTIT
+        Cosmopolitan
       </p>
       <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {pathname === "/"

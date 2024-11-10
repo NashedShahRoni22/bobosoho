@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: "#1b1340",
         secondary: "#3b82f6",
-        electricViolet: "#6d4aff",
+        electricViolet: "#5a3bcc",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

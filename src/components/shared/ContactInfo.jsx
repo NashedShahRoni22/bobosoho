@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 const ContactInfo = () => {
   return (
     <div>
-      <section className="bg-[#5a3bcc] py-2.5 text-white md:px-5">
+      <section className="bg-electricViolet py-2.5 text-white md:px-5">
         <div className="mx-5 flex justify-between md:container md:mx-auto">
           <div className="flex items-center gap-2.5">
             <FaLocationDot className="text-xl" />8 rue de Dublin, 34200, Sète,

@@ -7,22 +7,6 @@ import feat4Img from "../assets/home-page/feat-4.png";
 const featuresData = [
   {
     title: [
-      "Secured, private, user friendly social environment for ",
-      <span key="bobosoho" className="text-electricViolet">
-        email and chat sharing
-      </span>,
-    ],
-    description:
-      "Now join as an individual or with a group of friends family and create new image photos, videos, chat. Create your text message within seconds and share instantly to your group with unlimited users. Bobosoho integrated chat to connect in full security no sharing of your private info, respecting your privacy policy, bobosoho is your secured private environment to chat share photos videos and more, create unlimited groups with unlimited users, family or friends and instantly share with them",
-    benefits: [
-      "Smart Search: Quickly using the search bar find the emails or friends by their name or email, mobile number not required, but can be used and build your social group with unlimited users",
-      "Real-Time Updates: Keep track of new messages with real-time notifications and an intuitive inbox layout.",
-      "Seamless Navigation: Switch between contacts, settings, and other features using the sidebar, making email management a breeze.",
-    ],
-    image: feat1Img,
-  },
-  {
-    title: [
       "Bobosoho is a collaboration platform for ",
       <span key="bobosoho" className="text-electricViolet">
         Private & Business use
@@ -40,6 +24,22 @@ const featuresData = [
       "Easy to save: Easy to save messages in new create categories like save files and each to delete spam, unwanted messages with all select delete instantly ",
     ],
     image: feat2Img,
+  },
+  {
+    title: [
+      "Secured, private, user friendly social environment for ",
+      <span key="bobosoho" className="text-electricViolet">
+        email and chat sharing
+      </span>,
+    ],
+    description:
+      "Now join as an individual or with a group of friends family and create new image photos, videos, chat. Create your text message within seconds and share instantly to your group with unlimited users. Bobosoho integrated chat to connect in full security no sharing of your private info, respecting your privacy policy, bobosoho is your secured private environment to chat share photos videos and more, create unlimited groups with unlimited users, family or friends and instantly share with them",
+    benefits: [
+      "Smart Search: Quickly using the search bar find the emails or friends by their name or email, mobile number not required, but can be used and build your social group with unlimited users",
+      "Real-Time Updates: Keep track of new messages with real-time notifications and an intuitive inbox layout.",
+      "Seamless Navigation: Switch between contacts, settings, and other features using the sidebar, making email management a breeze.",
+    ],
+    image: feat1Img,
   },
   {
     title: [

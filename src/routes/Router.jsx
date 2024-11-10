@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Privacypolicy from "../pages/Privacypolicy";
 import Contact from "../pages/Contact";
 import Security from "../pages/Security";
-import Blogs from "../components/Blogs";
+import Blogs from "../pages/Blogs/Blogs";
 import Payment from "../pages/Payment/Payment";
 import EmailOverview from "../pages/EmailOverview/EmailOverview";
 import About from "../pages/About/About";

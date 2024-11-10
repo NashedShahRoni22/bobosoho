@@ -85,12 +85,12 @@ export default function Navbar() {
               )}
             </li>
           ))}
-          <Link
+          {/* <Link
             to="/login"
             className="rounded-full bg-electricViolet px-6 py-2 text-white shadow"
           >
             Log In
-          </Link>
+          </Link> */}
         </ul>
         {/* mobile view  */}
         {showNav ? (

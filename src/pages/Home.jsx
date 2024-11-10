@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Features from "../components/Features";
-import Blogs from "../components/Blogs";
+import Blogs from "./Blogs/Blogs";
 
 export default function Home() {
   return (
