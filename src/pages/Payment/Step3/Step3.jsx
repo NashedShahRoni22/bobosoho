@@ -1,6 +1,6 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import paypalIcon from "../../../assets/icons/paypal.svg";
-import stripeIcon from "../../../assets/icons/stripe-s.svg";
+import stripeIcon from "../../../assets/icons/stripe.svg";
 import bankIcon from "../../../assets/icons/bank.svg";
 import keyIcon from "../../../assets/icons/key.svg";
 

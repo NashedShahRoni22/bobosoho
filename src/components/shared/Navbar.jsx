@@ -102,12 +102,6 @@ export default function Navbar() {
               )}
             </li>
           ))}
-          {/* <Link
-            to="/login"
-            className="rounded-full bg-electricViolet px-6 py-2 text-white shadow"
-          >
-            Log In
-          </Link> */}
         </ul>
         {/* mobile view  */}
         {showNav ? (
@@ -174,7 +168,6 @@ export default function Navbar() {
                     className="flex items-center justify-between text-[18px]"
                   >
                     {mi.name}
-                    {/* <MdArrowOutward /> */}
                   </Link>
                 )}
               </div>

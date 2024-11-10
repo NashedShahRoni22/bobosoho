@@ -1,8 +1,8 @@
-import SectionWrapper from "../../../components/shared/SectionWrapper";
-import PricingCard from "../../../components/PricingCard";
+import PricingCard from "../../../components/Cards/PricingCard";
 import useIsPersonal from "../../../hooks/useIsPersonal";
 import { personalEmailPrice } from "../../../data/personalEmailPrice";
 import { businessEmailPrice } from "../../../data/businessEmailPrice";
+import SectionWrapper from "../../../components/shared/SectionWrapper";
 
 export default function EmailPricing() {
   const personalUser = useIsPersonal();

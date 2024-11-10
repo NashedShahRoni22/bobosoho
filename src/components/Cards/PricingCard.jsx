@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
-import savePaymentData from "../utils/savePaymentData";
+import savePaymentData from "../../utils/savePaymentData";
 
 export default function PricingCard({ details }) {
   const { title, price, type, highlightedFeat, features, note, otherProducts } =
