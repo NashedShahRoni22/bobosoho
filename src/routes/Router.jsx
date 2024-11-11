@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
         element: <Payment />,
       },
       {
-        path: "/calling",
+        path: "/calls",
         element: <Calling />,
       },
     ],

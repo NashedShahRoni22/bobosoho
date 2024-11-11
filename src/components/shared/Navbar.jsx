@@ -51,7 +51,7 @@ export default function Navbar() {
           name: "Video/Audio Calls",
           details: "Secure, High-Quality Video/Audio Calls for only $0.60.",
           Icon: MdOutlineVideoCall,
-          link: "/calling",
+          link: "/calls",
         },
         {
           name: "Discover Bobosoho",

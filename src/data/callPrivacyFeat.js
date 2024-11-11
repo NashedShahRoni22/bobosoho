@@ -17,4 +17,22 @@ export const callPrivacyFeat = [
     description:
       "Enjoy secure, high-quality calls for just $0.60, with full control over your privacy.",
   },
+  {
+    id: 45231,
+    title: "Self-Destructing Messages",
+    description:
+      "Set messages to disappear after a chosen time, adding an extra layer of privacy to your chats.",
+  },
+  {
+    id: 13245,
+    title: "No Contact Number Required",
+    description:
+      "Connect without sharing your phone number. Use a unique ID to start conversations securely.",
+  },
+  {
+    id: 12398,
+    title: "Optimized for Low Bandwidth",
+    description:
+      "Stay connected on low or unstable networks with messaging and calls optimized for any connection.",
+  },
 ];
