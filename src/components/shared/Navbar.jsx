@@ -35,13 +35,13 @@ export default function Navbar() {
       name: "Features",
       child: [
         {
-          name: "Private Email",
+          name: "Private Secured Email, Chat Share",
           details: "Secure & Private Email Platform for Personal Use.",
           Icon: MdOutlineMailLock,
           link: "/private",
         },
         {
-          name: "Business Email",
+          name: "Private Secured Business Email, Chat Share",
           details:
             "Enhanced Email & Chat Collaboration tools designed for Business Teams.",
           Icon: MdOutlineBusiness,
