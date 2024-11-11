@@ -1,5 +1,5 @@
 import SectionWrapper from "../../../components/shared/SectionWrapper";
-import videoCall from "../../../assets/video-call.jpg";
+import bannerImg from "../../../assets/calls-page/banner.jpg";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
         encryption, your personal messages stay between you and the recipient.
       </p>
       <img
-        src={videoCall}
+        src={bannerImg}
         alt="video call"
         className="mt-16 h-fit max-h-[32rem] w-full rounded-3xl object-cover"
       />
