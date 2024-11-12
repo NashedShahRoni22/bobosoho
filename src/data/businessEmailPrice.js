@@ -1,7 +1,6 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { BsFilePdf } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
-import { GiSettingsKnobs } from "react-icons/gi";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import {
   MdOutlineBlock,
@@ -11,6 +10,7 @@ import {
 import {
   PiCalendarDotsThin,
   PiDevicesLight,
+  PiUserLight,
   PiUsersLight,
 } from "react-icons/pi";
 import { RiSpamLine } from "react-icons/ri";
@@ -19,11 +19,11 @@ import { TiCloudStorageOutline } from "react-icons/ti";
 
 export const businessEmailPrice = [
   {
-    title: "Business Essentials",
+    title: "Business Email, Call & Chat Share",
     price: 6,
     type: {
       Icon: CiUser,
-      name: "For Business User",
+      name: "For Personal User",
     },
     highlightedFeat: [
       {
@@ -38,11 +38,15 @@ export const businessEmailPrice = [
     features: [
       {
         Icon: AiOutlineDashboard,
-        name: "Unique Dashboard",
+        name: "Master Admin Dashboard",
       },
       {
         Icon: AiOutlineDashboard,
-        name: "Master Admin Dashboard",
+        name: "Unique Dashboard",
+      },
+      {
+        Icon: PiUserLight,
+        name: "Single Private User",
       },
       {
         Icon: MdOutlineNotifications,
@@ -56,9 +60,13 @@ export const businessEmailPrice = [
         Icon: MdOutlineMailLock,
         name: "Private Account",
       },
-      {
+      /*  {
         Icon: PiCalendarDotsThin,
         name: "Project Planner",
+      }, */
+      {
+        Icon: TiCloudStorageOutline,
+        name: "Private Vault, Cloud Space for Photos, Videos & Docs",
       },
       {
         Icon: RiSpamLine,
@@ -78,11 +86,11 @@ export const businessEmailPrice = [
     ],
   },
   {
-    title: "Business Professional",
+    title: "Business Email, Call & Chat Share",
     price: 39.5,
     type: {
       Icon: PiUsersLight,
-      name: "For Professional User",
+      name: "For Family or Friends",
     },
     highlightedFeat: [
       {
@@ -100,8 +108,8 @@ export const businessEmailPrice = [
     ],
     features: [
       {
-        Icon: GiSettingsKnobs,
-        name: "All Features of Business Essentials",
+        Icon: AiOutlineDashboard,
+        name: "Master Admin Dashboard",
       },
       {
         Icon: AiOutlineDashboard,
@@ -110,6 +118,34 @@ export const businessEmailPrice = [
       {
         Icon: PiUsersLight,
         name: "Up to 100 Private User",
+      },
+      {
+        Icon: MdOutlineNotifications,
+        name: "Email Delivery Notification",
+      },
+      {
+        Icon: HiOutlineLanguage,
+        name: "Multi Language",
+      },
+      {
+        Icon: MdOutlineMailLock,
+        name: "Private Account",
+      },
+      /*   {
+        Icon: PiCalendarDotsThin,
+        name: "Project Planner",
+      }, */
+      {
+        Icon: TiCloudStorageOutline,
+        name: "Private Vault, Cloud Space for Photos, Videos & Docs",
+      },
+      {
+        Icon: RiSpamLine,
+        name: "Anti Spam Security",
+      },
+      {
+        Icon: MdOutlineBlock,
+        name: "No Advertisement",
       },
       {
         Icon: TfiWrite,

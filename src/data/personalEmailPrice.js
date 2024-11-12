@@ -1,25 +1,20 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { BsFilePdf } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
-import { GiSettingsKnobs } from "react-icons/gi";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import {
   MdOutlineBlock,
   MdOutlineMailLock,
   MdOutlineNotifications,
 } from "react-icons/md";
-import {
-  PiCalendarDotsThin,
-  PiDevicesLight,
-  PiUsersLight,
-} from "react-icons/pi";
+import { PiDevicesLight, PiUserLight, PiUsersLight } from "react-icons/pi";
 import { RiSpamLine } from "react-icons/ri";
 import { TfiWrite } from "react-icons/tfi";
 import { TiCloudStorageOutline } from "react-icons/ti";
 
 export const personalEmailPrice = [
   {
-    title: "Mail Essentials",
+    title: "Private Email, Call & Chat Share",
     price: 2,
     type: {
       Icon: CiUser,
@@ -41,6 +36,10 @@ export const personalEmailPrice = [
         name: "Unique Dashboard",
       },
       {
+        Icon: PiUserLight,
+        name: "Single Private User",
+      },
+      {
         Icon: MdOutlineNotifications,
         name: "Email Delivery Notification",
       },
@@ -53,16 +52,16 @@ export const personalEmailPrice = [
         name: "Private Account",
       },
       {
-        Icon: PiCalendarDotsThin,
-        name: "Project Planner",
-      },
-      {
-        Icon: RiSpamLine,
-        name: "Anti Spam Security",
+        Icon: TiCloudStorageOutline,
+        name: "Private Vault, Cloud Space for Photos, Videos & Docs",
       },
       {
         Icon: MdOutlineBlock,
         name: "No Advertisement",
+      },
+      {
+        Icon: RiSpamLine,
+        name: "Anti Spam Security",
       },
     ],
     note: "Bobosoho email is free, if you purchase any products from",
@@ -74,11 +73,11 @@ export const personalEmailPrice = [
     ],
   },
   {
-    title: "Mail Professional",
+    title: "Private Email, Call & Chat Share",
     price: 9.5,
     type: {
       Icon: PiUsersLight,
-      name: "For Teams",
+      name: "For Family or Friends",
     },
     highlightedFeat: [
       {
@@ -96,10 +95,6 @@ export const personalEmailPrice = [
     ],
     features: [
       {
-        Icon: GiSettingsKnobs,
-        name: "All Features of Most Essentials",
-      },
-      {
         Icon: AiOutlineDashboard,
         name: "Unique Dashboard Per User",
       },
@@ -108,16 +103,36 @@ export const personalEmailPrice = [
         name: "Up to 30 Private User",
       },
       {
+        Icon: MdOutlineNotifications,
+        name: "Email Delivery Notification",
+      },
+      {
+        Icon: HiOutlineLanguage,
+        name: "Multi Language",
+      },
+      {
+        Icon: MdOutlineMailLock,
+        name: "Private Account",
+      },
+      {
+        Icon: TiCloudStorageOutline,
+        name: "Private Vault, Cloud Space for Photos, Videos & Docs",
+      },
+      {
+        Icon: MdOutlineBlock,
+        name: "No Advertisement",
+      },
+      {
+        Icon: RiSpamLine,
+        name: "Anti Spam Security",
+      },
+      {
         Icon: TfiWrite,
         name: "DOC Writer",
       },
       {
         Icon: BsFilePdf,
         name: "PDF Converter",
-      },
-      {
-        Icon: TiCloudStorageOutline,
-        name: "Cloud Space for Photos, Videos & DOCS",
       },
       {
         Icon: PiDevicesLight,

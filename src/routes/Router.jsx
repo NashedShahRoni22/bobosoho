@@ -9,6 +9,7 @@ import Payment from "../pages/Payment/Payment";
 import EmailOverview from "../pages/EmailOverview/EmailOverview";
 import About from "../pages/About/About";
 import Calling from "../pages/Calling/Calling";
+import Login from "../pages/Login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -56,5 +57,9 @@ export const router = createBrowserRouter([
         element: <Calling />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);

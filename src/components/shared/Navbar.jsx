@@ -49,7 +49,7 @@ export default function Navbar() {
         },
         {
           name: "Video/Audio Calls",
-          details: "Secure, High-Quality Video/Audio Calls for only $0.60.",
+          details: "Secure, High-Quality Video/Audio Calls.",
           Icon: MdOutlineVideoCall,
           link: "/calls",
         },
@@ -109,6 +109,12 @@ export default function Navbar() {
               )}
             </li>
           ))}
+          <Link
+            to="/login"
+            className="rounded-full bg-electricViolet px-6 py-2 text-white shadow"
+          >
+            Log In
+          </Link>
         </ul>
         {/* mobile view  */}
         {showNav ? (
@@ -179,6 +185,12 @@ export default function Navbar() {
                 )}
               </div>
             ))}
+            <Link
+              to="/login"
+              className="inline-block w-fit rounded-md bg-electricViolet px-6 py-2 text-white shadow"
+            >
+              Log In
+            </Link>
           </div>
         )}
       </section>

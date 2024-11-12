@@ -41,7 +41,7 @@ export default function PricingCard({ details }) {
       >
         <span className="flex items-center px-3">
           <span className="transition-transform duration-300 group-hover:-translate-x-2">
-            Get Mail Essentials
+            Get Started
           </span>
         </span>
         <FaArrowRight className="-ml-3 text-electricViolet opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
