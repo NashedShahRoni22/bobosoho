@@ -7,8 +7,11 @@ export default function Banner() {
       {/* Left Side: Text */}
       <div className="lg:w-1/2">
         <h1 className="text-5xl font-medium md:text-6xl">
-          Efficient, Secure & User-Friendly{" "}
-          <span className="text-electricViolet">Email Sharing Platform</span>
+          Efficient, Private, Secure & User-Friendly{" "}
+          <span className="text-electricViolet">
+            {" "}
+            Email, call, voice & video, chat Sharing Platform
+          </span>
         </h1>
         <p className="mb-10 mt-5 text-lg text-gray-600">
           Protect your privacy with Bobosoho’s secure email & chat platform.

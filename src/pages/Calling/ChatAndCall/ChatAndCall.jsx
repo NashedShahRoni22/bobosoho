@@ -2,11 +2,11 @@ import { chatAndCallData } from "../../../data/chatAndCallData";
 
 export default function ChatAndCall() {
   return (
-    <section className="space-y-16 py-10 md:py-20">
+    <section className="">
       {chatAndCallData.map((data, i) => (
         <div
           key={i}
-          className="flex w-full flex-col items-center md:mx-auto md:max-w-[1536px] md:flex-row"
+          className="flex w-full flex-col items-center md:mx-auto md:container md:flex-row py-10 md:py-20"
         >
           <div
             className={`mb-8 px-5 md:mt-0 md:w-1/2 md:px-0 ${
