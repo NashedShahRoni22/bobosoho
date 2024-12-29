@@ -14,7 +14,7 @@ export default function About() {
         className="flex min-h-[75vh] flex-col justify-center px-5 py-10 md:min-h-[90vh] md:py-20"
       >
         <div className="md:container md:mx-auto">
-          <h1 className="text-center text-4xl font-medium text-white md:text-5xl">
+          <h1 className="text-center text-4xl font-medium text-white md:text-3xl">
             We believe a better world starts <br /> with{" "}
             <span className="text-electricViolet">Privacy</span> and{" "}
             <span className="text-electricViolet">Digital Freedom</span>

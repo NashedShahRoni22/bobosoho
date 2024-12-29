@@ -5,7 +5,7 @@ import { callPrivacyFeat } from "../../../data/callPrivacyFeat";
 export default function CallFeatCards() {
   return (
     <SectionWrapper>
-      <h2 className="text-center text-4xl md:text-5xl">
+      <h2 className="text-center text-4xl md:text-3xl">
         Secure your conversations
       </h2>
       <p className="mt-6 text-center text-xl font-medium text-neutral-700">

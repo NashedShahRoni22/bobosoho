@@ -49,6 +49,7 @@ export default function PricingCard({ details }) {
 
       {/* features details */}
       <div className="mt-4 space-y-3.5">
+        <p className="font-semibold">Get these Extras with Bobosoho :</p>
         {features.map((feat, i) => (
           <div key={i} className="flex items-center gap-2 text-sm text-white">
             <feat.Icon className="text-2xl text-neutral-400" />
@@ -57,16 +58,18 @@ export default function PricingCard({ details }) {
         ))}
       </div>
 
-      <div className="mb-6 mt-12 h-[0.5px] w-full bg-neutral-500"></div>
+      {note && otherProducts && <>
+        <div className="mb-6 mt-12 h-[0.5px] w-full bg-neutral-500"></div>
 
-      <p className="text-sm">Note: {note}:</p>
+      <p className="text-sm">{note}:</p>
       <div className="mt-3 flex flex-col gap-1.5 text-xs">
         {otherProducts.map((product, i) => (
-          <Link key={i} to={product.link} className="w-fit underline">
-            {product.name}
-          </Link>
+          <div className="flex items-center gap-1.5">
+            <input type="checkbox" id={product.name} value={product.name} className="size-3.5"/> <label htmlFor={product.name}>{product.name}</label>
+          </div>
         ))}
       </div>
+      </>}
     </div>
   );
 }

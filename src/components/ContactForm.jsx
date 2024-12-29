@@ -180,7 +180,7 @@ const ContactForm = () => {
 
   return (
     <section className="py-10 pb-20">
-      <h2 className="text-center text-5xl font-semibold">Get In Touch</h2>
+      <h2 className="text-center text-3xl font-semibold">Get In Touch</h2>
       <p className="mx-auto mt-4 text-center text-lg text-gray-600">
         Fill out the form or find us on the map to get in touch.
       </p>

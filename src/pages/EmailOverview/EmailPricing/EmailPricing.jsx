@@ -10,7 +10,7 @@ export default function EmailPricing({ sectionRef }) {
   return (
     <div ref={sectionRef} className="min-h-screen bg-primary text-white">
       <SectionWrapper>
-        <h2 className="text-center text-4xl font-medium capitalize md:text-5xl">
+        <h2 className="text-center text-4xl font-medium capitalize md:text-3xl">
           Choose a plan & start protecting <br /> your{" "}
           {personalUser ? "Personal" : "Business"} data
         </h2>

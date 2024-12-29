@@ -20,7 +20,7 @@ const Contact = () => {
     <section className="px-5 md:container md:mx-auto">
       <div className="py-10 flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
-          <h1 className="text-5xl font-semibold">Contact Us</h1>
+          <h1 className="text-3xl font-semibold">Contact Us</h1>
           <p className="mt-4 text-lg text-gray-600 max-w-96">
             To make requests for further information, contact us via our social
             channels.

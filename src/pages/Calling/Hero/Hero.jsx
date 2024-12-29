@@ -4,7 +4,7 @@ import bannerImg from "../../../assets/calls-page/banner.jpg";
 export default function Hero() {
   return (
     <SectionWrapper>
-      <h1 className="text-center text-4xl md:text-5xl">
+      <h1 className="text-center text-4xl md:text-3xl">
         Seamless Video & Audio Calls
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-neutral-700">

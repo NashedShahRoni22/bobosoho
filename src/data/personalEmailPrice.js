@@ -1,11 +1,13 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { BsFilePdf } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
+import { FiBook } from "react-icons/fi";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import {
   MdOutlineBlock,
   MdOutlineMailLock,
   MdOutlineNotifications,
+  MdOutlinePrivacyTip,
 } from "react-icons/md";
 import { PiDevicesLight, PiUserLight, PiUsersLight } from "react-icons/pi";
 import { RiSpamLine } from "react-icons/ri";
@@ -14,7 +16,7 @@ import { TiCloudStorageOutline } from "react-icons/ti";
 
 export const personalEmailPrice = [
   {
-    title: "Private Email, Call & Chat Share",
+    title: "Bobosoho Private Email, Call & Chat Share",
     price: 2,
     type: {
       Icon: CiUser,
@@ -33,23 +35,27 @@ export const personalEmailPrice = [
     features: [
       {
         Icon: AiOutlineDashboard,
-        name: "Unique Dashboard",
+        name: "Pensaki Blackboard Unique Dashboard",
       },
       {
         Icon: PiUserLight,
         name: "Single Private User",
       },
       {
-        Icon: MdOutlineNotifications,
-        name: "Email Delivery Notification",
-      },
-      {
-        Icon: HiOutlineLanguage,
-        name: "Multi Language",
-      },
-      {
         Icon: MdOutlineMailLock,
         name: "Private Account",
+      },
+      {
+        Icon: TfiWrite,
+        name: "DOC Writer",
+      },
+      {
+        Icon: FiBook,
+        name: "Assignment Writer",
+      },
+      {
+        Icon: BsFilePdf,
+        name: "PDF Converter",
       },
       {
         Icon: TiCloudStorageOutline,
@@ -63,17 +69,14 @@ export const personalEmailPrice = [
         Icon: RiSpamLine,
         name: "Anti Spam Security",
       },
-    ],
-    note: "Bobosoho email is free, if you purchase any products from",
-    otherProducts: [
       {
-        name: "BFIN IT",
-        link: "/business",
+        Icon: MdOutlinePrivacyTip,
+        name: "Total Privacy Gurantee",
       },
     ],
   },
   {
-    title: "Private Email, Call & Chat Share",
+    title: "Bobosoho Private Email, Call & Chat Share",
     price: 9.5,
     type: {
       Icon: PiUsersLight,
@@ -96,23 +99,31 @@ export const personalEmailPrice = [
     features: [
       {
         Icon: AiOutlineDashboard,
-        name: "Unique Dashboard Per User",
+        name: "Pensaki Blackboard Unique Dashboard Per User",
       },
       {
         Icon: PiUsersLight,
         name: "Up to 30 Private User",
       },
       {
-        Icon: MdOutlineNotifications,
-        name: "Email Delivery Notification",
-      },
-      {
-        Icon: HiOutlineLanguage,
-        name: "Multi Language",
-      },
-      {
         Icon: MdOutlineMailLock,
         name: "Private Account",
+      },
+      {
+        Icon: TfiWrite,
+        name: "DOC Writer",
+      },
+      {
+        Icon: FiBook,
+        name: "Assignment Writer",
+      },
+      {
+        Icon: BsFilePdf,
+        name: "PDF Converter",
+      },
+      {
+        Icon: MdOutlineNotifications,
+        name: "Email Delivery Notification",
       },
       {
         Icon: TiCloudStorageOutline,
@@ -127,31 +138,29 @@ export const personalEmailPrice = [
         name: "Anti Spam Security",
       },
       {
-        Icon: TfiWrite,
-        name: "DOC Writer",
-      },
-      {
-        Icon: BsFilePdf,
-        name: "PDF Converter",
-      },
-      {
         Icon: PiDevicesLight,
         name: "Unlimited Device Support",
       },
     ],
-    note: "Bobosoho email is free, if you purchase any products like",
+    note: "Choose any 3 optional features below to take your Business to the Next Level!",
     otherProducts: [
       {
         name: "Pensaki",
-        link: "/business",
       },
       {
-        name: "Omada-Clasico",
-        link: "/business",
+        name: "Omada Project Manager"
       },
       {
-        name: "Hosting-Products",
-        link: "/business",
+        name: "Clasico Payslips"
+      },
+      {
+        name: "Ifgaap Mobile Invoicing"
+      },
+      {
+        name: "Ifgaap Accounting"
+      },
+      {
+        name: "E-commerce website (Hosting charges extra)"
       },
     ],
   },

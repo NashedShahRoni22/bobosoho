@@ -80,7 +80,7 @@ export default function Footer() {
       {/* email joining section */}
       <section className="bg-electricViolet py-10 text-center text-white md:px-5 md:py-20">
         <div className="md:container md:mx-auto">
-          <h2 className="text-2xl font-semibold tracking-wider lg:text-5xl">
+          <h2 className="text-2xl font-semibold tracking-wider lg:text-3xl">
             Join BFINIT Cosmopolitan
           </h2>
           <p className="mt-2 text-lg tracking-wide">
