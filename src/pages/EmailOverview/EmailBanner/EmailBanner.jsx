@@ -39,7 +39,7 @@ export default function EmailBanner({ handleScrollToSection }) {
           <img
             src={privateEmail}
             alt="bobosoho private email"
-            className="h-fit w-full object-cover"
+            className="h-auto w-full object-cover"
           />
         </div>
       </div>
