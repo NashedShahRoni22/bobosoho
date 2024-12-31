@@ -6,7 +6,7 @@ export default function Blog() {
 
   return (
     <section className="mx-5 min-h-screen pb-60 pt-10 md:container md:mx-auto md:pt-20">
-      <h2 className="text-center text-4xl font-semibold md:text-5xl">
+      <h2 className="text-center text-4xl font-semibold md:text-3xl">
         Recent Blogs & Information
       </h2>
       <p className="mt-6 text-center text-xl font-medium text-gray-600">

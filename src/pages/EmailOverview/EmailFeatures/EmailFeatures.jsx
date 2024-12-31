@@ -9,7 +9,7 @@ export default function EmailFeatures() {
 
   return (
     <SectionWrapper>
-      <h2 className="text-center text-4xl font-medium capitalize md:text-5xl">
+      <h2 className="text-center text-4xl font-medium capitalize md:text-3xl">
         Encrypted email <br /> that ensures{" "}
         {personalUser ? "personal" : "business"} privacy
       </h2>

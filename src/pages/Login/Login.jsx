@@ -14,13 +14,13 @@ export default function Login() {
         </Link>
 
         {/* Form Div */}
-        <div className="mt-8 flex h-fit min-h-screen justify-center font-poppins md:mt-4">
+        <div className="mt-8 flex h-fit min-h-screen justify-center items-center font-poppins md:mt-4">
           <form
             style={{
-              backgroundImage:
+              backgroundImage: 
                 "linear-gradient(rgb(64, 57, 95) 0%, rgb(27, 19, 64) 100%)",
             }}
-            className="h-fit min-w-full rounded-xl border border-electricViolet px-6 py-8 text-white sm:min-w-96"
+            className="h-fit sm:min-w-96 md:w-1/3 rounded-xl border border-electricViolet px-6 py-8 text-white"
           >
             <h1 className="text-3xl font-medium">Sign in</h1>
             <p className="mb-6 mt-2.5 text-sm text-neutral-300">

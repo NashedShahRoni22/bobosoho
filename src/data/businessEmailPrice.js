@@ -1,6 +1,7 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { BsFilePdf } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
+import { FiBook } from "react-icons/fi";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import {
   MdOutlineBlock,
@@ -19,16 +20,16 @@ import { TiCloudStorageOutline } from "react-icons/ti";
 
 export const businessEmailPrice = [
   {
-    title: "Business Email, Call & Chat Share",
+    title: "Bobosoho Business Email, Call & Chat Share",
     price: 6,
     type: {
       Icon: CiUser,
-      name: "For Personal User",
+      name: "For One Business User",
     },
     highlightedFeat: [
       {
         Icon: MdOutlineMailLock,
-        name: "Private Email",
+        name: "Private Business Email",
       },
       {
         Icon: HiOutlineLanguage,
@@ -38,11 +39,27 @@ export const businessEmailPrice = [
     features: [
       {
         Icon: AiOutlineDashboard,
-        name: "Master Admin Dashboard",
+        name: "Pensaki Blackbaord Unique Admin Dashboard",
       },
       {
         Icon: AiOutlineDashboard,
-        name: "Unique Dashboard",
+        name: "Add Users by Upgrading to Full Business Plan",
+      },
+      {
+        Icon: TfiWrite,
+        name: "DOC Writer",
+      },
+      {
+        Icon: FiBook,
+        name: "Assignment Writer",
+      },
+      {
+        Icon: BsFilePdf,
+        name: "PDF Converter",
+      },
+      {
+        Icon: TiCloudStorageOutline,
+        name: "Private Vault, Cloud Space for Photos, Videos & Docs",
       },
       {
         Icon: PiUserLight,
@@ -53,20 +70,8 @@ export const businessEmailPrice = [
         name: "Email Delivery Notification",
       },
       {
-        Icon: HiOutlineLanguage,
-        name: "Multi Language",
-      },
-      {
         Icon: MdOutlineMailLock,
         name: "Private Account",
-      },
-      /*  {
-        Icon: PiCalendarDotsThin,
-        name: "Project Planner",
-      }, */
-      {
-        Icon: TiCloudStorageOutline,
-        name: "Private Vault, Cloud Space for Photos, Videos & Docs",
       },
       {
         Icon: RiSpamLine,
@@ -77,16 +82,27 @@ export const businessEmailPrice = [
         name: "No Advertisement",
       },
     ],
-    note: "Bobosoho email is free, if you purchase any products from",
+    note: "Add any 2 of the below to expand your Home Business",
     otherProducts: [
       {
-        name: "BFIN IT",
-        link: "/business",
+        name: "Omada HR",
+      },
+      {
+        name: "Omada Project Manager",
+      },
+      {
+        name: "Clasico Payslips",
+      },
+      {
+        name: "Fgaap Mobile Invoicing",
+      },
+      {
+        name: "Ifgaap GL Accounting",
       },
     ],
   },
   {
-    title: "Business Email, Call & Chat Share",
+    title: "Bobosoho Business Email, Call & Chat Share",
     price: 39.5,
     type: {
       Icon: PiUsersLight,
@@ -95,7 +111,7 @@ export const businessEmailPrice = [
     highlightedFeat: [
       {
         Icon: MdOutlineMailLock,
-        name: "Private Email",
+        name: "Private Business Email",
       },
       {
         Icon: HiOutlineLanguage,
@@ -109,11 +125,11 @@ export const businessEmailPrice = [
     features: [
       {
         Icon: AiOutlineDashboard,
-        name: "Master Admin Dashboard",
+        name: "Pensaki Blackboard 1 x Master Admin Dashboard",
       },
       {
         Icon: AiOutlineDashboard,
-        name: "Unique Dashboard Per User",
+        name: "Upto 100 Unique Dashboard Per User",
       },
       {
         Icon: PiUsersLight,
@@ -131,10 +147,6 @@ export const businessEmailPrice = [
         Icon: MdOutlineMailLock,
         name: "Private Account",
       },
-      /*   {
-        Icon: PiCalendarDotsThin,
-        name: "Project Planner",
-      }, */
       {
         Icon: TiCloudStorageOutline,
         name: "Private Vault, Cloud Space for Photos, Videos & Docs",
@@ -150,6 +162,10 @@ export const businessEmailPrice = [
       {
         Icon: TfiWrite,
         name: "DOC Writer",
+      },
+      {
+        Icon: FiBook,
+        name: "Assignment Writer",
       },
       {
         Icon: BsFilePdf,
@@ -168,20 +184,18 @@ export const businessEmailPrice = [
         name: "Anti Spam Security",
       },
     ],
-    note: "Bobosoho email is free, if you purchase any products like",
+    note: "Add any one of the below to expand your Business",
     otherProducts: [
-      {
-        name: "Pensaki",
-        link: "/business",
-      },
-      {
-        name: "Omada-Clasico",
-        link: "/business",
-      },
-      {
-        name: "Hosting-Products",
-        link: "/business",
-      },
-    ],
+      { name: "Omada Hr Payroll" },
+      { name: "Omada Project Manager" },
+      { name: "Clasico Payslip" },
+      { name: "E-commerce Website (Hosting Charges)" },
+      { name: "Ifgaap Mobile Invoicing" },
+      { name: "Ifgaap Accounting" },
+      { name: "Account Recuperation for Any Group Member Departing" },
+      { name: "Marketing Email Campaign to Outside Bobosoho Emails (7000/Month)" },
+      { name: "Omada-Clasico" },
+      { name: "Hosting-Products" },
+    ]
   },
 ];

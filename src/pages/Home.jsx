@@ -4,7 +4,7 @@ import Blogs from "./Blogs/Blogs";
 
 export default function Home() {
   return (
-    <main className="md:px-5">
+    <main>
       <Banner />
       <Features />
       <Blogs />

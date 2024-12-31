@@ -88,48 +88,50 @@ const featuresData = [
 
 export default function Features() {
   return (
-    <section className="mx-5 md:container md:mx-auto md:min-h-screen">
+    <>
       {featuresData.map((feature, index) => (
-        <div
-          key={index}
-          className="flex min-h-screen flex-col items-center justify-between gap-16 py-10 md:py-20 lg:flex-row"
-        >
-          {/* Alternate layout based on the index for large devices */}
+        <section key={index} className={`${index % 2 === 0 && "bg-gray-200"}`}>
           <div
-            className={`lg:w-1/2 ${
-              index % 2 === 0 ? "order-2 lg:order-1" : "order-1 lg:order-2"
-            } `}
+            key={index}
+            className={`flex flex-col items-center justify-between gap-16 px-5 py-10 md:container md:mx-auto md:min-h-screen md:py-20 lg:flex-row`}
           >
-            <img
-              src={feature.image}
-              alt={`${feature.title} Example`}
-              className="h-fit w-full"
-            />
-          </div>
+            {/* Alternate layout based on the index for large devices */}
+            <div
+              className={`lg:w-1/2 ${
+                index % 2 === 0 ? "order-2 lg:order-1" : "order-1 lg:order-2"
+              } `}
+            >
+              <img
+                src={feature.image}
+                alt={`${feature.title} Example`}
+                className="h-fit w-full"
+              />
+            </div>
 
-          <div
-            className={`text-left lg:w-1/2 ${
-              index % 2 === 0 ? "order-2" : "order-1"
-            }`}
-          >
-            <h1 className="text-4xl font-semibold capitalize leading-normal">
-              {feature.title}
-            </h1>
-            <p className="pb-6 pt-3 text-lg text-gray-600">
-              {feature.description}
-            </p>
-            <ul className="space-y-4 text-lg text-gray-600">
-              {feature.benefits.map((benefit, idx) => (
-                <li key={idx} className="flex gap-3.5">
-                  <FaRegCircleCheck className="mt-1.5 min-w-fit text-primary" />{" "}
-                  {benefit}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-lg text-gray-600">{feature?.note}</p>
+            <div
+              className={`text-left lg:w-1/2 ${
+                index % 2 === 0 ? "order-2" : "order-1"
+              }`}
+            >
+              <h1 className="text-4xl font-semibold capitalize leading-normal">
+                {feature.title}
+              </h1>
+              <p className="pb-6 pt-3 text-lg text-gray-600">
+                {feature.description}
+              </p>
+              <ul className="space-y-4 text-lg text-gray-600">
+                {feature.benefits.map((benefit, idx) => (
+                  <li key={idx} className="flex gap-3.5">
+                    <FaRegCircleCheck className="mt-1.5 min-w-fit text-electricViolet" />{" "}
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-lg text-gray-600">{feature?.note}</p>
+            </div>
           </div>
-        </div>
+        </section>
       ))}
-    </section>
+    </>
   );
 }

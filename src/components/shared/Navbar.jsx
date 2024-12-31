@@ -110,10 +110,10 @@ export default function Navbar() {
             </li>
           ))}
           <Link
-            to="/login"
+            to="https://www.bobosohomail.com/"
             className="rounded-full bg-electricViolet px-6 py-2 text-white shadow"
           >
-            Log In
+            Email Login
           </Link>
         </ul>
         {/* mobile view  */}
@@ -186,10 +186,10 @@ export default function Navbar() {
               </div>
             ))}
             <Link
-              to="/login"
+              to="https://www.bobosohomail.com/"
               className="inline-block w-fit rounded-md bg-electricViolet px-6 py-2 text-white shadow"
             >
-              Log In
+              Email Login
             </Link>
           </div>
         )}
