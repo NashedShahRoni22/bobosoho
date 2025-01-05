@@ -2,21 +2,21 @@ import { chatAndCallData } from "../../../data/chatAndCallData";
 
 export default function ChatAndCall() {
   return (
-    <section className="">
+    <section>
       {chatAndCallData.map((data, i) => (
         <div
           key={i}
-          className="flex w-full flex-col items-center md:mx-auto md:container md:flex-row py-10 md:py-20"
+          className="flex w-full flex-col items-center py-10 md:container md:mx-auto md:flex-row md:py-20"
         >
           <div
-            className={`mb-8 px-5 md:mt-0 md:w-1/2 md:px-0 ${
+            className={`mb-8 w-full px-5 md:mt-0 md:w-1/2 md:px-0 ${
               i % 2 === 0 ? "md:order-1" : "md:order-2"
             }`}
           >
             <img
               src={data.img}
               alt=""
-              className={`h-[27rem] w-full rounded-2xl object-cover md:rounded-none ${i % 2 === 0 ? "md:rounded-r-2xl" : "md:rounded-l-2xl"}`}
+              className={`h-[390px] w-full rounded-2xl object-cover md:rounded-none lg:h-[27rem] ${i % 2 === 0 ? "md:rounded-r-2xl" : "md:rounded-l-2xl"}`}
             />
           </div>
           <div

@@ -48,7 +48,7 @@ export default function About() {
           <img
             src={connectionsImg}
             alt="people walking"
-            className="h-96 w-full rounded-md object-cover md:h-full"
+            className="h-[390px] w-full rounded-md object-cover lg:h-auto"
           />
         </div>
       </section>

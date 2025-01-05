@@ -9,11 +9,15 @@ export default function AboutOverview() {
           className="flex w-full flex-col items-center md:mx-auto md:max-w-[1536px] md:flex-row"
         >
           <div
-            className={`mb-8 px-5 md:mt-0 md:w-1/2 md:px-0 ${
+            className={`mb-8 w-full px-5 md:mt-0 md:w-1/2 md:px-0 ${
               i % 2 === 0 ? "md:order-1" : "md:order-2"
             }`}
           >
-            <img src={data.img} alt="" />
+            <img
+              src={data.img}
+              alt=""
+              className="h-[390px] w-full object-contain md:h-auto"
+            />
           </div>
           <div
             className={`px-5 md:w-1/2 md:pl-16 md:pr-0 ${

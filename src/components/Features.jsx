@@ -104,7 +104,7 @@ export default function Features() {
               <img
                 src={feature.image}
                 alt={`${feature.title} Example`}
-                className="h-fit w-full"
+                className="h-[390px] w-full object-contain lg:h-auto"
               />
             </div>
 

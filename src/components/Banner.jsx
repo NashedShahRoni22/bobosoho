@@ -3,7 +3,7 @@ import bannerImg from "../assets/home-page/banner.png";
 
 export default function Banner() {
   return (
-    <section className="mx-5 flex min-h-screen flex-col items-center justify-between gap-16 py-10 md:container md:mx-auto md:py-20 lg:flex-row">
+    <section className="mx-5 flex flex-col items-center gap-16 py-10 md:container md:mx-auto md:py-20 lg:min-h-screen lg:flex-row lg:justify-between">
       {/* Left Side: Text */}
       <div className="lg:w-1/2">
         <h1 className="text-3xl font-medium md:text-5xl">
@@ -28,7 +28,11 @@ export default function Banner() {
 
       {/* Right Side: Image */}
       <div className="lg:w-1/2">
-        <img className=" " src={bannerImg} alt="Email platform" />
+        <img
+          className="h-[390px] w-full object-contain lg:h-auto"
+          src={bannerImg}
+          alt="Email platform"
+        />
       </div>
     </section>
   );

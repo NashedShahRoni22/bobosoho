@@ -14,9 +14,11 @@ import {
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const [showChild, setShowChild] = useState("");
+
   // Function to handle scroll event
   const handleScroll = () => {
     setShowNav(false);
+    setShowChild("");
   };
 
   useEffect(() => {
@@ -116,6 +118,7 @@ export default function Navbar() {
             Email Login
           </Link>
         </ul>
+
         {/* mobile view  */}
         {showNav ? (
           <button className="lg:hidden" onClick={() => setShowNav(!showNav)}>
