@@ -8,12 +8,7 @@ import {
   MdOutlineMailLock,
   MdOutlineNotifications,
 } from "react-icons/md";
-import {
-  PiCalendarDotsThin,
-  PiDevicesLight,
-  PiUserLight,
-  PiUsersLight,
-} from "react-icons/pi";
+import { PiDevicesLight, PiUserLight, PiUsersLight } from "react-icons/pi";
 import { RiSpamLine } from "react-icons/ri";
 import { TfiWrite } from "react-icons/tfi";
 import { TiCloudStorageOutline } from "react-icons/ti";
@@ -22,6 +17,8 @@ export const businessEmailPrice = [
   {
     title: "Bobosoho Business Email, Call & Chat Share",
     price: 6,
+    user: 1,
+    packageName: "business",
     type: {
       Icon: CiUser,
       name: "For One Business User",
@@ -104,6 +101,8 @@ export const businessEmailPrice = [
   {
     title: "Bobosoho Business Email, Call & Chat Share",
     price: 39.5,
+    user: 100,
+    packageName: "business",
     type: {
       Icon: PiUsersLight,
       name: "For Family or Friends",
@@ -193,9 +192,11 @@ export const businessEmailPrice = [
       { name: "Ifgaap Mobile Invoicing" },
       { name: "Ifgaap Accounting" },
       { name: "Account Recuperation for Any Group Member Departing" },
-      { name: "Marketing Email Campaign to Outside Bobosoho Emails (7000/Month)" },
+      {
+        name: "Marketing Email Campaign to Outside Bobosoho Emails (7000/Month)",
+      },
       { name: "Omada-Clasico" },
       { name: "Hosting-Products" },
-    ]
+    ],
   },
 ];

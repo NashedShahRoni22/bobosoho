@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function PricingCard({ details }) {
-  const { title, price, type, highlightedFeat, features, note, otherProducts } =
-    details;
+  const {
+    title,
+    price,
+    type,
+    highlightedFeat,
+    features,
+    note,
+    otherProducts,
+    user,
+    packageName,
+  } = details;
 
   return (
     <div
@@ -35,7 +44,7 @@ export default function PricingCard({ details }) {
       </p>
 
       <Link
-        to="https://www.bobosohomail.com/email_ins/signUp_email.php"
+        to={`https://www.bobosohomail.com/email_ins/signUp_email.php?registration_from=1&user=${user}&package=${packageName}&price=${price}`}
         target="_blanck"
         className="group flex items-center justify-center rounded-full border px-5 py-3 hover:border-electricViolet md:px-5 lg:text-xl"
       >
@@ -58,18 +67,26 @@ export default function PricingCard({ details }) {
         ))}
       </div>
 
-      {note && otherProducts && <>
-        <div className="mb-6 mt-12 h-[0.5px] w-full bg-neutral-500"></div>
+      {note && otherProducts && (
+        <>
+          <div className="mb-6 mt-12 h-[0.5px] w-full bg-neutral-500"></div>
 
-      <p className="text-sm">{note}:</p>
-      <div className="mt-3 flex flex-col gap-1.5 text-xs">
-        {otherProducts.map((product, i) => (
-          <div className="flex items-center gap-1.5">
-            <input type="checkbox" id={product.name} value={product.name} className="size-3.5"/> <label htmlFor={product.name}>{product.name}</label>
+          <p className="text-sm">{note}:</p>
+          <div className="mt-3 flex flex-col gap-1.5 text-xs">
+            {otherProducts.map((product, i) => (
+              <div key={i} className="flex items-center gap-1.5">
+                <input
+                  type="checkbox"
+                  id={product.name}
+                  value={product.name}
+                  className="size-3.5"
+                />{" "}
+                <label htmlFor={product.name}>{product.name}</label>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      </>}
+        </>
+      )}
     </div>
   );
 }

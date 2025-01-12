@@ -3,6 +3,7 @@ import bannerImg from "../assets/home-page/banner.png";
 
 export default function Banner() {
   return (
+    /* TODO: use px-5 instead of mx-5 */
     <section className="mx-5 flex flex-col items-center gap-16 py-10 md:container md:mx-auto md:py-20 lg:min-h-screen lg:flex-row lg:justify-between">
       {/* Left Side: Text */}
       <div className="lg:w-1/2">

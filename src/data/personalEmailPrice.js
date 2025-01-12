@@ -18,6 +18,8 @@ export const personalEmailPrice = [
   {
     title: "Bobosoho Private Email, Call & Chat Share",
     price: 2,
+    user: 1,
+    packageName: "individual",
     type: {
       Icon: CiUser,
       name: "For Personal User",
@@ -78,6 +80,8 @@ export const personalEmailPrice = [
   {
     title: "Bobosoho Private Email, Call & Chat Share",
     price: 9.5,
+    user: 30,
+    packageName: "family",
     type: {
       Icon: PiUsersLight,
       name: "For Family or Friends",
@@ -148,19 +152,19 @@ export const personalEmailPrice = [
         name: "Pensaki",
       },
       {
-        name: "Omada Project Manager"
+        name: "Omada Project Manager",
       },
       {
-        name: "Clasico Payslips"
+        name: "Clasico Payslips",
       },
       {
-        name: "Ifgaap Mobile Invoicing"
+        name: "Ifgaap Mobile Invoicing",
       },
       {
-        name: "Ifgaap Accounting"
+        name: "Ifgaap Accounting",
       },
       {
-        name: "E-commerce website (Hosting charges extra)"
+        name: "E-commerce website (Hosting charges extra)",
       },
     ],
   },
