@@ -104,6 +104,7 @@ export default function Features() {
               <img
                 src={feature.image}
                 alt={`${feature.title} Example`}
+                loading="lazy"
                 className="h-[390px] w-full object-contain lg:h-auto"
               />
             </div>

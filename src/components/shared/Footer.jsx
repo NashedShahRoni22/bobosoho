@@ -107,7 +107,12 @@ export default function Footer() {
         <div className="mx-5 grid grid-cols-1 gap-8 py-10 md:container md:mx-auto md:grid-cols-2 md:py-28 lg:grid-cols-4">
           <div className="">
             <Link to={"/"}>
-              <img className="w-44" src={logo} alt="bobosoho logo" />
+              <img
+                className="w-44"
+                src={logo}
+                alt="bobosoho logo"
+                loading="lazy"
+              />
             </Link>
             <p className="mt-3 text-2xl">By BFINIT Cosmopolitan</p>
             <p className="mb-6 mt-3">

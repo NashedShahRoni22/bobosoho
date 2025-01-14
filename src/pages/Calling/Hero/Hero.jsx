@@ -16,6 +16,7 @@ export default function Hero() {
         <img
           src={bannerImg}
           alt="video call"
+          loading="lazy"
           className="h-auto max-h-full w-auto max-w-full rounded-3xl object-contain lg:h-full lg:w-full lg:object-cover"
         />
       </div>

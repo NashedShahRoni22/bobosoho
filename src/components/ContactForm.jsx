@@ -334,7 +334,7 @@ const ContactForm = () => {
               <BiCopyright /> 2024 BFIN. BITSS by BFIN. All rights reserved.
             </p>
             <div className="mt-2.5 flex flex-col items-center justify-center gap-2.5">
-              <img src={bittsLogo} alt="" />
+              <img src={bittsLogo} alt="" loading="lazy" />
               <p className="text-xs">
                 This form is powered by bitss cyber security
               </p>

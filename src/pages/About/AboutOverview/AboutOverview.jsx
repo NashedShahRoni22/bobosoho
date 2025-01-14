@@ -16,6 +16,7 @@ export default function AboutOverview() {
             <img
               src={data.img}
               alt=""
+              loading="lazy"
               className="h-[390px] w-full object-contain md:h-auto"
             />
           </div>

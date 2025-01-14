@@ -33,6 +33,7 @@ export default function Banner() {
           className="h-[390px] w-full object-contain lg:h-auto"
           src={bannerImg}
           alt="Email platform"
+          loading="lazy"
         />
       </div>
     </section>

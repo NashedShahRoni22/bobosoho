@@ -74,7 +74,7 @@ export default function Navbar() {
       <section className="mx-5 flex items-center justify-between py-3 md:container md:mx-auto">
         {/* logo here  */}
         <Link to="/" className="flex items-center">
-          <img src={logo} className="h-10" alt="bobosoho logo" />
+          <img src={logo} className="h-10" alt="bobosoho logo" loading="lazy" />
         </Link>
         {/* desktop view  */}
         <ul className="hidden lg:flex lg:items-center lg:gap-6">

@@ -48,6 +48,7 @@ export default function About() {
           <img
             src={connectionsImg}
             alt="people walking"
+            loading="lazy"
             className="h-[390px] w-full rounded-md object-cover lg:h-auto"
           />
         </div>

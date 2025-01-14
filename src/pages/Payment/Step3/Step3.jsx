@@ -28,7 +28,12 @@ export default function Step3({ register, watchStep3, setStep }) {
           className="flex gap-8 rounded-lg border px-6 py-4 text-neutral-600"
         >
           <div>
-            <img src={paypalIcon} alt="paypal icon" className="mx-auto w-16" />
+            <img
+              src={paypalIcon}
+              alt="paypal icon"
+              loading="lazy"
+              className="mx-auto w-16"
+            />
             <p className="text-center text-sm font-medium">Paypal</p>
           </div>
           <div className="flex flex-1 flex-col justify-between py-1.5">
@@ -51,7 +56,12 @@ export default function Step3({ register, watchStep3, setStep }) {
           className="flex gap-11 rounded-lg border px-6 py-4 text-neutral-600"
         >
           <div>
-            <img src={stripeIcon} alt="stripe icon" className="mx-auto w-12" />
+            <img
+              src={stripeIcon}
+              alt="stripe icon"
+              loading="lazy"
+              className="mx-auto w-12"
+            />
             <p className="mt-1.5 text-center text-sm font-medium">Stripe</p>
           </div>
           <div className="flex flex-1 flex-col justify-between py-1.5">
@@ -74,7 +84,12 @@ export default function Step3({ register, watchStep3, setStep }) {
           className="flex gap-9 rounded-lg border px-6 py-4 text-neutral-600"
         >
           <div>
-            <img src={keyIcon} alt="key icon" className="mx-auto w-12" />
+            <img
+              src={keyIcon}
+              alt="key icon"
+              loading="lazy"
+              className="mx-auto w-12"
+            />
             <p className="mt-1.5 text-center text-sm font-medium">Key</p>
           </div>
           <div className="flex flex-1 flex-col justify-center">
@@ -98,7 +113,12 @@ export default function Step3({ register, watchStep3, setStep }) {
           className="flex gap-9 rounded-lg border px-6 py-4 text-neutral-600"
         >
           <div>
-            <img src={bankIcon} alt="bank icon" className="mx-auto w-14" />
+            <img
+              src={bankIcon}
+              alt="bank icon"
+              loading="lazy"
+              className="mx-auto w-14"
+            />
             <p className="mt-1.5 text-center text-sm font-medium">Bank</p>
           </div>
           <div className="flex flex-1 flex-col justify-between py-1.5">

@@ -18,7 +18,12 @@ export default function Blog() {
           ? blogsData.slice(0, 6).map((data, i) => (
               <div key={i} className="rounded border">
                 <Link to="/">
-                  <img src={data.image} alt="" className="rounded-t border-b" />
+                  <img
+                    src={data.image}
+                    alt=""
+                    className="rounded-t border-b"
+                    loading="lazy"
+                  />
                 </Link>
                 <div className="px-4 py-6 text-gray-600">
                   <Link to="/" className="text-xl font-semibold text-black">
@@ -38,7 +43,12 @@ export default function Blog() {
           : blogsData.map((data, i) => (
               <div key={i} className="rounded border">
                 <Link to="/">
-                  <img src={data.image} alt="" className="rounded-t border-b" />
+                  <img
+                    src={data.image}
+                    alt=""
+                    className="rounded-t border-b"
+                    loading="lazy"
+                  />
                 </Link>
                 <div className="px-4 py-6 text-gray-600">
                   <Link to="/" className="text-xl font-semibold text-black">

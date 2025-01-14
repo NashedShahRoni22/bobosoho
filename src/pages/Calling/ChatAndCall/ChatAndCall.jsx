@@ -16,6 +16,7 @@ export default function ChatAndCall() {
             <img
               src={data.img}
               alt=""
+              loading="lazy"
               className={`h-[390px] w-full rounded-2xl object-cover md:rounded-none lg:h-[27rem] ${i % 2 === 0 ? "md:rounded-r-2xl" : "md:rounded-l-2xl"}`}
             />
           </div>

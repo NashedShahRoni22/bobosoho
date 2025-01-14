@@ -10,17 +10,17 @@ export default function Login() {
     <main className="bg-primary p-5">
       <section className="md:container md:mx-auto">
         <Link to="/" className="inline-block w-fit">
-          <img src={bobosohoLogo} alt="bobosoho logo" />
+          <img src={bobosohoLogo} alt="bobosoho logo" loading="lazy" />
         </Link>
 
         {/* Form Div */}
-        <div className="mt-8 flex h-fit min-h-screen justify-center items-center font-poppins md:mt-4">
+        <div className="mt-8 flex h-fit min-h-screen items-center justify-center font-poppins md:mt-4">
           <form
             style={{
-              backgroundImage: 
+              backgroundImage:
                 "linear-gradient(rgb(64, 57, 95) 0%, rgb(27, 19, 64) 100%)",
             }}
-            className="h-fit sm:min-w-96 md:w-1/3 rounded-xl border border-electricViolet px-6 py-8 text-white"
+            className="h-fit rounded-xl border border-electricViolet px-6 py-8 text-white sm:min-w-96 md:w-1/3"
           >
             <h1 className="text-3xl font-medium">Sign in</h1>
             <p className="mb-6 mt-2.5 text-sm text-neutral-300">
