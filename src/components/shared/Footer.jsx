@@ -1,79 +1,23 @@
-import logo from "../../assets/bobosoho.jpg";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { pages } from "../../data/pages";
+import { products } from "../../data/products";
+import logo from "../../assets/bobosoho.jpg";
 
 export default function Footer() {
-  const hostingProducts = [
-    {
-      name: "Fully Managed Dedicated Server",
-      link: "/fully-managed-dedicated-server",
-    },
-    {
-      name: "Fully Managed Virtual Dedicated Server",
-      link: "/fully-managed-virtual-dedicated-server",
-    },
-    {
-      name: "Self Managed Dedicated Server",
-      link: "/self-managed-dedicated-server",
-    },
-    {
-      name: "Fully Managed Pure Website Hosting",
-      link: "fully-managed-pure-web-hosting",
-    },
-    {
-      name: "Self Managed Pure Website Hosting",
-      link: "/self-managed-pure-web-hosting",
-    },
-  ];
+  const [hostingProducts, setHostingProducts] = useState([]);
 
-  const Products = [
-    {
-      name: "Bitss Cyber Security",
-      link: "https://bitss.fr/",
-    },
-    {
-      name: "Pensaki Blackboard",
-      link: "https://pensaki.org/",
-    },
-    {
-      name: "Omada HR Payroll",
-      link: "https://omada-clasico.org/",
-    },
-    {
-      name: "Ifgaap Acounting & Invoicing",
-      link: "https://ifgaap.org/",
-    },
-    {
-      name: "BFINIT Saas Software",
-      link: "https://officetools.bobosoho.com/special-software/",
-    },
-    {
-      name: "BFINIT White Label",
-      link: "https://bfin.company/software/white_label/",
-    },
-    {
-      name: "Sosay Social Media",
-      link: "https://sosay.org/",
-    },
-  ];
+  useEffect(() => {
+    const fetchHostingProducts = async () => {
+      const res = await fetch(
+        "https://hpanel.bfinit.com/api/product/categories",
+      );
+      const data = await res.json();
+      setHostingProducts(data.data);
+    };
 
-  const Pages = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "About Us",
-      link: "/about",
-    },
-    {
-      name: "Contact Us",
-      link: "/contact",
-    },
-    {
-      name: "Blogs",
-      link: "/blogs",
-    },
-  ];
+    fetchHostingProducts();
+  }, []);
 
   return (
     <footer>
@@ -131,18 +75,25 @@ export default function Footer() {
           <div>
             <h1 className="font-semibold">Hosting Products</h1>
             <div className="ml-2 mt-2 flex flex-col gap-2">
-              {hostingProducts.map((product, i) => (
-                <Link to={product.link} key={i} className="flex gap-2.5">
-                  {product.name}
-                </Link>
-              ))}
+              {hostingProducts &&
+                hostingProducts.length > 0 &&
+                hostingProducts.map((product, i) => (
+                  <Link
+                    key={i}
+                    to={`https://bfinit.com/hosting-products/${product.id}`}
+                    target="_blanck"
+                    className="flex gap-2.5"
+                  >
+                    {product.name}
+                  </Link>
+                ))}
             </div>
           </div>
           {/* other products */}
           <div>
             <h1 className="font-semibold">Other Products</h1>
             <div className="ml-2 mt-2 flex flex-col gap-2">
-              {Products.map((product, i) => (
+              {products.map((product, i) => (
                 <Link to={product.link} key={i} className="flex gap-2.5">
                   {product.name}
                 </Link>
@@ -153,7 +104,7 @@ export default function Footer() {
           <div>
             <h1 className="font-semibold">Quick Links to BFINIT</h1>
             <div className="ml-2 mt-2 flex flex-col gap-2">
-              {Pages.map((product, i) => (
+              {pages.map((product, i) => (
                 <Link to={product.link} key={i} className="flex gap-2.5">
                   {product.name}
                 </Link>
