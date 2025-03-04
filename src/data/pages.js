@@ -15,4 +15,16 @@ export const pages = [
     name: "Blogs",
     link: "/blogs",
   },
+  {
+    name: "Cookie Policy",
+    link: "/cookie-policy",
+  },
+  {
+    name: "Privacy Policy",
+    link: "/privacy-policy",
+  },
+  {
+    name: "Terms & Conditions",
+    link: "/terms-and-conditions",
+  },
 ];

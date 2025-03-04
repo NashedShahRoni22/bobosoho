@@ -1,6 +1,6 @@
 const Privacypolicy = () => {
   return (
-    <section className="mx-10 md:container md:mx-auto">
+    <section className="mx-10 py-10 md:container md:mx-auto md:py-20">
       <div className="mx-48">
         <h1 className="my-10 text-center text-2xl font-semibold underline lg:text-4xl">
           Privacy policy

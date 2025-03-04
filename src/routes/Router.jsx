@@ -10,6 +10,8 @@ import EmailOverview from "../pages/EmailOverview/EmailOverview";
 import About from "../pages/About/About";
 import Calling from "../pages/Calling/Calling";
 import Login from "../pages/Login/Login";
+import CookiePolicy from "../pages/CookiePolicy/CookiePolicy";
+import TermsAndConditions from "../pages/TermsAndConditions/TermsAndConditions";
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +35,7 @@ export const router = createBrowserRouter([
         element: <EmailOverview />,
       },
       {
-        path: "/privacypolicy",
+        path: "/privacy-policy",
         element: <Privacypolicy />,
       },
       {
@@ -55,6 +57,14 @@ export const router = createBrowserRouter([
       {
         path: "/calls",
         element: <Calling />,
+      },
+      {
+        path: "/cookie-policy",
+        element: <CookiePolicy />,
+      },
+      {
+        path: "/terms-and-conditions",
+        element: <TermsAndConditions />,
       },
     ],
   },
